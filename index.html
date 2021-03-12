@@ -1,0 +1,4186 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Member Welcome Center</title>
+    <link rel="stylesheet" href="https://www.desertfinancial.com/-/media/96840f76d5c749808ab032d3116dfd33.ashx">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        body,
+        html {
+            background: #003A79;
+            background: url("https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/W1-Onboarding-Homepage-Background-Desktop-1280x800-V1.ashx") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .welcome {
+            position: fixed;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: #003A79;
+            background: url("https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/W1-Onboarding-Homepage-Background-Desktop-1280x800-V1.ashx") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            z-index: 100;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            overflow: scroll;
+        }
+
+        .welcome strong {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .welcomeContainer {
+            width: 100%;
+            max-width: 678px;
+            margin: 0px auto;
+        }
+
+        .welcome img {
+            width: 100%;
+            max-width: 555px;
+            margin: -35px auto 0;
+        }
+
+        .welcomeTitle {
+            display: block;
+            height: 130px;
+            background: rgba(0, 58, 121, 0.5);
+            margin-bottom: 28px;
+        }
+
+        .welcomeTitle h1 {
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin: -10px;
+        }
+
+        .welcomeTitle h2 {
+            font-size: 37px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0px;
+            padding: 20px 0px 0px
+        }
+
+        .welcomeTitle h1 span {
+            color: #F78D28;
+        }
+
+        .welcome .cta-secondary {
+            margin: 108px auto 60px auto;
+        }
+
+        .header {
+            height: 130px;
+            background: #003A79;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin: -10px;
+        }
+
+        .header h2 {
+            font-size: 37px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0px;
+            padding: 20px 0px 0px
+        }
+
+        .header h1 span {
+            color: #F78D28;
+        }
+
+        .left-column {
+            position: absolute;
+            top: 0px;
+            width: 25%;
+            height: 130px;
+        }
+
+        .left-column img {
+            float: left;
+            height: 117px;
+            margin-top: 6px;
+        }
+
+        .right-column {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 130px;
+            height: 130px;
+        }
+
+        .container {
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 46px;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 23px;
+            height: 3px;
+            background-color: #F78D28;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-6px, 6px);
+            background-color: #00B3E7
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-7px, -7px);
+            background-color: #00B3E7
+        }
+
+        .tabbed {
+            background: rgba(0, 179, 231, 1.0);
+            height: 61px;
+        }
+
+        .tabbed .splide__list {
+            margin: 4px auto 0px auto !important;
+        }
+
+        .number {
+            height: 44px;
+            width: 44px;
+            background: #003A79;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            border-radius: 22px;
+            font-size: 20px;
+            margin: 2px auto;
+        }
+
+        .number.done:before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 5px;
+            background-color: #00B3E7;
+            left: 8px;
+            top: 29px;
+            border-radius: 5px;
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+
+        .number.done:after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 28px;
+            background-color: #00B3E7;
+            left: 25px;
+            top: 12px;
+            border-radius: 5px;
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+
+        .number p {
+            position: relative;
+            padding-top: 10px;
+            margin: 0px;
+            z-index: 10;
+        }
+
+        .splide__slide.is-active .number {
+            background: #F78D28;
+        }
+
+        .last {
+            margin-right: 0px !important;
+        }
+
+        .itemTab {
+            border-radius: 8px;
+            border: solid #ffffff 2px;
+            margin: 44px auto 0px;
+            Max-width: 865px;
+            height: 100%;
+            position: relative;
+            display: block;
+            text-align: center;
+        }
+
+        .itemTabContainer {
+            margin: 64px 0px 35px 0px;
+        }
+
+        .itemTabIcon {
+            margin: 0px auto 0px;
+        }
+
+        .itemTab h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin: 5px;
+        }
+
+        .itemTab h2 {
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0px;
+            padding: 27px 0px 0px
+        }
+
+        .itemTab h3 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin: 20px;
+            color: #F78D28;
+        }
+
+        .itemTab p {
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0px;
+            padding: 14px 0px 0px
+        }
+
+        .cta-secondary {
+            display: block;
+            position: relative;
+            width: 259px;
+            padding: 15px 0px;
+            margin: 108px auto 0px auto;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid #F78D28;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            transition: all 0.3s linear;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .cta-secondary:hover {
+            background-color: rgba(247, 141, 40, 0.5);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-secondary:before {
+            content: " ";
+            background-color: #F78D28;
+            height: 2px;
+            right: 23px;
+            position: absolute;
+            top: 46%;
+            width: 14px;
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+            transition: all 0.3s linear;
+        }
+
+        .cta-secondary:after {
+            content: " ";
+            background-color: #F78D28;
+            height: 2px;
+            right: 23px;
+            position: absolute;
+            top: 46%;
+            width: 14px;
+            transform: rotate(-45deg);
+            transform-origin: top right;
+            transition: all 0.3s linear;
+        }
+
+        .cta-secondary:hover:before {
+            background-color: #ffffff;
+        }
+
+        .cta-secondary:hover:after {
+            background-color: #ffffff;
+        }
+
+        .cta-secondaryblue {
+            display: block;
+            position: relative;
+            width: 259px;
+            padding: 15px 0px;
+            margin: 50px auto 50px auto;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid #F78D28;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: #003A79;
+            transition: all 0.3s linear;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .cta-secondaryblue:hover {
+            background-color: rgba(247, 141, 40, 0.5);
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .cta-secondaryblue:before {
+            content: " ";
+            background-color: #F78D28;
+            height: 2px;
+            right: 23px;
+            position: absolute;
+            top: 46%;
+            width: 14px;
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+            transition: all 0.3s linear;
+        }
+
+        .cta-secondaryblue:after {
+            content: " ";
+            background-color: #F78D28;
+            height: 2px;
+            right: 23px;
+            position: absolute;
+            top: 46%;
+            width: 14px;
+            transform: rotate(-45deg);
+            transform-origin: top right;
+            transition: all 0.3s linear;
+        }
+
+        .cta-secondaryblue:hover:before {
+            background-color: #ffffff;
+        }
+
+        .cta-secondaryblue:hover:after {
+            background-color: #ffffff;
+        }
+
+        .splide__arrows {
+            display: none;
+        }
+
+        #menuLinks {
+            display: none;
+        }
+
+        .mainMenu {
+            position: absolute;
+            z-index: 120;
+            right: 32px;
+            width: 345px;
+            background: #003A79;
+            margin-top: 15px;
+        }
+
+        .mainMenu:before {
+            content: " ";
+            border-bottom: 15px solid #003A79;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            position: relative;
+            top: -34px;
+            right: -304px;
+        }
+
+        .menuItem {
+            height: 52px;
+            position: relative;
+        }
+
+        a .menuItem {
+            color: #ffffff;
+        }
+
+        a:hover .menuItem {
+            background: #ffffff;
+            color: #003A79;
+        }
+
+        a:hover .menuItem hr {
+            background: #ffffff;
+        }
+
+        a:hover .arrow-top {
+            background: #F78D28;
+        }
+
+        a:hover .arrow-bottom {
+            background: #F78D28;
+        }
+
+        .menuItem.firstitem {
+            margin-top: -19px;
+        }
+
+        .menuItem hr {
+            position: absolute;
+            bottom: 0;
+            border: 0;
+            height: 1px;
+            width: 315px;
+            background: #00B3E7;
+            margin: 0px 15px;
+        }
+
+        .arrowRight {
+            float: right;
+            width: 62px;
+            height: 52px;
+            text-align: center;
+        }
+
+        .arrow {
+            height: 17px;
+            right: 30px;
+            position: absolute;
+            top: 15px;
+            width: 13px;
+        }
+
+        .arrow-top {
+            background-color: #ffffff;
+            height: 2px;
+            left: -5px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: rotate(45deg);
+            transform-origin: bottom right;
+        }
+
+        .arrow-bottom {
+            background-color: #ffffff;
+            height: 2px;
+            left: -5px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        }
+
+        .arrow:after {
+            background-color: #fff;
+            content: '';
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all $transition-time;
+        }
+
+        .menuTitle {
+            float: right;
+            height: 52px;
+            text-align: right;
+        }
+
+        .menuTitle h1 {
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: -2px;
+        }
+
+        .menuTitle h2 {
+            color: #F78D28;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0px;
+            padding: 10px 0px 0px
+        }
+
+        .footer {
+            height: 60px;
+            text-align: center;
+            position: sticky;
+            vertical-align: middle;
+            bottom: 0px;
+            width: 100%;
+            margin-top: 80px;
+            z-index: 100;
+        }
+
+        .footer p {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin-top: 22px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #module1,
+        #module2,
+        #module3,
+        #module4,
+        #module5,
+        #module6,
+        #module7,
+        #module8,
+        #module9,
+        #module10 {
+            display: none;
+        }
+
+        .module {
+            position: fixed;
+            height: calc(100% - 130px);
+            width: 100%;
+            background: #EFEFEF;
+            z-index: 110;
+            font-size: 15px;
+            letter-spacing: -0.5px;
+            color: #003A79;
+            overflow: scroll;
+        }
+
+        .moduleContainer {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 35px 0px 21px 0px;
+        }
+
+        .moduleContainerGrey {
+            width: 100%;
+            max-width: 900px;
+            background: #efefef;
+            margin: 0 auto;
+            padding: 35px 0px;
+        }
+
+        .moduleContainerGrey hr {
+            border: 0;
+            height: 30px;
+            width: 100%;
+            background: #ffffff;
+            margin: 40px auto;
+        }
+
+        .moduleContainerGrey .moduleContent {
+            background: none;
+        }
+
+        .moduleContent {
+            width: 100%;
+            max-width: 605px;
+            background: #ffffff;
+            margin: 0 auto;
+            line-height: 25px;
+        }
+
+        .moduleContent a {
+            color: #00B3E7;
+        }
+
+        .moduleContent H1 {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin: 67px 0px 62px 0px;
+        }
+
+        .moduleContent H1:after {
+            display: block;
+            background-color: #00B3E7;
+            content: '';
+            height: 5px;
+            width: 120px;
+            position: relative;
+            top: 29px;
+        }
+
+        .moduleContent H3 {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            font-style: italic;
+        }
+
+        .moduleContent hr {
+            border: 0;
+            height: 1px;
+            width: 95%;
+            background: #00B3E7;
+            margin: 0px auto;
+        }
+
+        .videoContainer {
+            width: 100%;
+            max-width: 900px;
+            background: #E9E9E9;
+            margin: 0 auto;
+            text-align: center;
+            padding: 33px 0px;
+        }
+
+        .ModuleTitle {
+            border: solid 2px #003A79;
+            border-radius: 8px;
+            margin: 0px 35px 0px 35px;
+            text-align: center;
+        }
+
+        .ModuleTitle img {
+            padding-top: 64px;
+        }
+
+        .ModuleTitle h1 {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin: 5px;
+            padding-bottom: 45px;
+        }
+
+        .ModuleTitle h2 {
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin: 0px;
+            padding: 27px 0px 0px;
+            color: #00B3E7;
+        }
+
+        .apps {
+            margin: 50px 0px 40px 0px;
+        }
+
+        .apps img {
+            margin-right: 38px;
+        }
+
+        .numberBullet {
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            font-weight: bold;
+            color: #003A79;
+            border: solid 1px #00B3E7;
+            border-radius: 100%;
+            float: left;
+        }
+
+        .arrowBullet {
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 16px solid #003A79;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .information {
+            margin-left: 32px;
+        }
+
+        .information span {
+            font-weight: bold;
+            color: #00B3E7;
+            text-decoration: underline;
+        }
+
+        .information a {
+            color: #00B3E7;
+            text-decoration: underline;
+        }
+
+        .cta-module {
+            display: block;
+            position: relative;
+            width: 259px;
+            padding: 10px 0px 15px 0px;
+            margin: 54px auto 45px auto;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid #F78D28;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            color: #003A79;
+            transition: all 0.3s linear;
+            text-decoration: none;
+            border-radius: 7px;
+            background-color: #ffffff;
+        }
+
+        .cta-module .text {
+            display: inline-block;
+            position: relative;
+            margin-left: 8px;
+        }
+
+        .cta-module:hover {
+            background-color: rgba(247, 141, 40, 0.5);
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .checkmark {
+            display: inline-block;
+            margin-bottom: -3px;
+            width: 24px;
+            height: 24px;
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Chrome, Safari, Opera */
+            transform: rotate(45deg);
+        }
+
+        .checkmark_circle {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #F78D28;
+            border-radius: 15px;
+            left: 0;
+            top: 0;
+            transition: all 0.3s linear;
+        }
+
+        .checkmark_stem {
+            position: absolute;
+            width: 7px;
+            height: 2px;
+            background-color: #F78D28;
+            left: 9px;
+            top: 18px;
+            transition: all 0.3s linear;
+        }
+
+        .checkmark_kick {
+            position: absolute;
+            width: 2px;
+            height: 14px;
+            background-color: #F78D28;
+            left: 15px;
+            top: 6px;
+            transition: all 0.3s linear;
+        }
+
+        .cta-module:hover .checkmark_circle {
+            border: 2px solid #ffffff;
+        }
+
+        .cta-module:hover .checkmark_stem {
+            background-color: #ffffff;
+        }
+
+        .cta-module:hover .checkmark_kick {
+            background-color: #ffffff;
+        }
+
+        .cta-module label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .module .footer {
+            position: relative;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            color: #7B7B7B;
+        }
+
+        .closer {
+            float: right;
+        }
+
+        .cta-closer {
+            display: block;
+            padding: 10px 35px 10px 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            color: #003A79;
+            text-decoration: none;
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+
+        .tip {
+            background-color: #efefef;
+            margin: 20px 0px;
+            padding: 10px 10px 10px 85px;
+            position: relative;
+        }
+
+        .tip:before {
+            content: "";
+            background-image: url(https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/tips.ashx);
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 44px;
+            height: 46px;
+        }
+
+        .equity {
+            background-color: #efefef;
+            margin: 20px 0px;
+            padding: 20px 35px 20px 135px;
+            position: relative;
+            font-size: 24px;
+            color: #003A79;
+            text-transform: uppercase;
+        }
+
+        .equity:before {
+            content: "";
+            background-image: url(https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/orangeHouse.ashx);
+            position: absolute;
+            left: 35px;
+            height: 54px;
+            width: 62px;
+        }
+
+        .equity .left {
+            float: left;
+            width: 36%;
+            margin-bottom: 15px;
+        }
+
+        .equity .right {
+            position: relative;
+            float: left;
+            width: 54%;
+            padding-left: 43px;
+            margin-bottom: 15px;
+        }
+
+        .right:before {
+            content: "";
+            top: 22px;
+            left: 0px;
+            height: 4px;
+            width: 24px;
+            background: #F78D28;
+            position: absolute;
+        }
+
+        .equity .bottom {
+            text-align: center;
+            border-top: 2px solid #00B3E7;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        small {
+            color: #707070;
+            line-height: 1.2;
+        }
+
+        hr.spacer {
+            margin: 40px auto;
+            height: 2px;
+        }
+
+        .dotted:after {
+            content: '';
+            height: 23px;
+            width: 95%;
+            display: block;
+            position: relative;
+            margin: -14px auto;
+            border-top: 2px dotted #00B3E7;
+        }
+
+        .void {
+            width: 53px;
+            height: 25px;
+            margin: auto;
+            background-color: #ffffff;
+            z-index: 15;
+            position: relative;
+        }
+
+        .and {
+            height: 23px;
+            width: 23px;
+            background: #ffffff;
+            text-align: center;
+            border: 1px solid #00B3E7;
+            border-radius: 22px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 1px auto;
+        }
+
+        .memberNumber {
+            float: left;
+            width: 40px;
+            height: 40px;
+            background-color: none;
+            text-align: center;
+            border: 1px solid #00B3E7;
+            border-radius: 22px;
+            font-size: 16px;
+            margin-top: 60px;
+        }
+
+        .memberNumber p {
+            position: relative;
+            padding-top: 8px;
+            margin: 0px;
+        }
+
+        .memberDashLight,
+        .memberDashDark,
+        .memberDashOrange {
+            width: calc(100% - 120px);
+            float: left;
+        }
+
+        .memberDashLight:after {
+            content: '';
+            height: 160px;
+            width: 95%;
+            display: block;
+            position: relative;
+            margin: -80px auto;
+            border-top: 4px dotted #00B3E7;
+        }
+
+        .memberDashDark:after {
+            content: '';
+            height: 160px;
+            width: 95%;
+            display: block;
+            position: relative;
+            margin: -80px auto;
+            border-top: 4px dotted #003A79;
+        }
+
+        .memberDashOrange:after {
+            content: '';
+            height: 160px;
+            width: 95%;
+            display: block;
+            position: relative;
+            margin: -80px auto;
+            border-top: 4px dotted #F78D28;
+        }
+
+        .memberVoid {
+            width: 130px;
+            height: 160px;
+            margin: auto;
+            background-color: #EFEFEF;
+            z-index: 15;
+            position: relative;
+        }
+
+        .memberName {
+            width: 100px;
+            height: 160px;
+            margin: auto;
+        }
+
+        .memberName img {
+            height: 160px;
+            margin: auto;
+            display: block;
+        }
+
+        .memberPoint {
+            float: left;
+            width: 78px;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 38px;
+        }
+
+        .flexLiks>div {
+            float: left;
+            margin-right: 35px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /*CALCULATOR*/
+        .product__calculator {
+            background: #EFEFEF;
+            padding: 25px 0px;
+            margin: 0px 0px 0px;
+        }
+
+        .calculator__cont {
+            max-width: 960px;
+            margin: auto;
+        }
+
+        .calculator__cont h2 {
+            color: #003A79;
+            margin: 0 0 25px 30px;
+        }
+
+        .content form {
+            margin: auto;
+        }
+
+        .product__boxes_calc .content {
+            padding: 0 30px 30px;
+        }
+
+        .CalculatorContainer {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+            font-size: 16px;
+            font-weight: 400;
+            overflow: hidden;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            border-radius: 2px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .MonthlyContainer {
+            color: #fff !important;
+            font-size: 16px !important;
+            line-height: 18px !important;
+            overflow: hidden;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .MonthlyContainer p {
+            color: #003A79;
+            margin: 0 0 40px;
+        }
+
+        .installment-label {
+            color: #FFFFFF !important;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .installment-value {
+            text-align: center;
+            font-weight: bold !important;
+            font-size: 58px !important;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .input-text {
+            color: rgba(0, 0, 0, .54);
+            font-size: 16px;
+            line-height: 18px;
+            overflow: hidden;
+            width: 65%;
+        }
+
+        .textfield {
+            position: relative;
+            font-size: 14px;
+            display: inline-block;
+            box-sizing: border-box;
+            max-width: 100%;
+            margin: 0;
+            padding: 10px 10px 10px 0px;
+            float: left;
+            width: 100%;
+            color: #545454;
+        }
+
+        .textfield__input,
+        select {
+            display: block;
+            font-size: 14px !important;
+            width: calc(100% - 11px) !important;
+            text-align: left;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            background: #fff;
+            color: #545454;
+        }
+
+        select {
+            height: 28px;
+            width: 305px !important;
+        }
+
+        .textfield__input:focus {
+            outline: none;
+        }
+
+        span#p1 {
+            margin-left: -5px;
+        }
+
+        ::-webkit-input-placeholder {
+            /* WebKit, Blink, Edge */
+            font-size: 14px;
+            color: #9E9E9E;
+        }
+
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            font-size: 14px;
+            color: #9E9E9E;
+            opacity: 1;
+        }
+
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            font-size: 14px;
+            color: #9E9E9E;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            font-size: 14px;
+            color: #9E9E9E;
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            font-size: 14px;
+            color: #9E9E9E;
+        }
+
+        .textfield__label {
+            bottom: 0;
+            color: rgba(0, 0, 0, .26);
+            font-size: 16px;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            position: absolute;
+            display: block;
+            top: 24px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: #0078bd;
+            border-radius: 0px;
+            border: 0px solid #000000;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            border: 0px solid #000000;
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            background: #fe8d0b;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -4.5px;
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #0078bd;
+        }
+
+        span.LV_validation_message.LV_valid {
+            display: none;
+        }
+
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: #0078bd;
+            border-radius: 0px;
+            border: 0px solid #000000;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            border: 0px solid #000000;
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            background: #0078bd;
+            cursor: pointer;
+        }
+
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        input[type=range]::-ms-fill-lower {
+            background: #0078bd;
+            border: 0px solid #000000;
+            border-radius: 0px;
+            box-shadow: 0px 0px 0px #000000;
+        }
+
+        input[type=range]::-ms-fill-upper {
+            background: #0078bd;
+            border: 0px solid #000000;
+            border-radius: 0px;
+            box-shadow: 0px 0px 0px #000000;
+        }
+
+        input[type=range]::-ms-thumb {
+            box-shadow: 0px 0px 1px #000000;
+            border: 0px solid #000000;
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            background: #0078bd;
+            cursor: pointer;
+        }
+
+        input[type=range]:focus::-ms-fill-lower {
+            background: #0078bd;
+        }
+
+        input[type=range]:focus::-ms-fill-upper {
+            background: #0078bd;
+        }
+
+        label.slider-label {
+            font-size: 14px;
+            display: inline-block;
+            margin: 0 0 5px;
+        }
+
+        .input-dollar.left input {
+            padding-left: 2px !important;
+            position: relative;
+        }
+
+        .calculation-title {
+            text-align: center;
+        }
+
+        .calc-disclosure {
+            font-size: 12px;
+            line-height: 12px;
+            opacity: 0.54;
+            text-align: center;
+            margin: 0 !important;
+        }
+
+        /*OFFER BOX*/
+        .rates {
+            line-height: initial;
+            padding-bottom: 25px;
+            display: inline-block;
+        }
+
+        .border {
+            position: relative;
+            border: 2px solid #243C7A;
+            padding: 10px;
+            float: left;
+            z-index: 5;
+        }
+
+        .border .top-content {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            line-height: 1;
+            margin: -9px 0 0;
+            /* half of font-size */
+            background: #fff;
+            padding: 0 3px;
+            color: #243C7A;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .border .bottom-content {
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+            line-height: 1;
+            margin: 0 0 -7px 0;
+            /* half of font-size */
+            background: #fff;
+            padding: 0 3px;
+            color: #243C7A;
+            font-style: italic;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .rate {
+            float: left;
+            font-size: 60px;
+            font-weight: bold;
+            color: #243C7A;
+            margin-right: 5px;
+        }
+
+        .apr {
+            float: right;
+            font-weight: bold;
+            color: #243C7A;
+        }
+
+        .percent {
+            font-size: 32px;
+            color: #243C7A;
+            margin-bottom: -8px;
+            margin-top: 8px;
+            font-style: normal;
+        }
+
+        .spacebetween {
+            position: relative;
+            float: left;
+            width: 15px;
+            color: #01B2E7;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .spacebetweenplus {
+            position: relative;
+            float: left;
+            color: #01B2E7;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-right: -18px;
+            margin-left: -5px;
+            z-index: 10;
+        }
+
+        .spacebetweenplus:before {
+            content: "+";
+        }
+
+        .givingAmount {
+            font-size: 22px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .givingAmount h4 {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            font-size: 32px;
+            font-weight: bold;
+            color: #F78D28;
+        }
+
+        .givingAmount h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 3px solid #003A79;
+            margin: auto;
+        }
+
+        .givingAmount h4:before {
+            margin-right: 10px
+        }
+
+        .givingAmount h4:after {
+            margin-left: 10px
+        }
+
+        .givingColumn {
+            width: 33%;
+            float: left;
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .givingColumn img {
+            margin: 30px auto 0px auto;
+        }
+
+        .givingColumn span {
+            font-size: 32px;
+            font-weight: bold;
+            color: #F78D28;
+            text-transform: none;
+        }
+
+        .givingContent {
+            width: 100%;
+            max-width: 605px;
+            margin: 0 auto;
+        }
+
+        .noticeContent {
+            width: 100%;
+            max-width: 605px;
+            margin: 0 auto;
+            font-size: 14px !important;
+            text-align: left !important;
+        }
+
+        .noticeContent span {
+            color: #F78D28;
+        }
+
+        .noticeContent .cta-secondary {
+            color: #003A79;
+            margin: 30px auto 0px auto;
+        }
+
+        .noticeContent .cta-secondary:hover {
+            color: #ffffff;
+        }
+
+        .bonus {
+            background: #F5F5F5;
+            padding: 60px 25px 25px 25px;
+        }
+
+        .cta-calculate {
+            display: block;
+            position: relative;
+            width: 259px;
+            padding: 15px 0px;
+            margin: 45px auto;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid #F78D28;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: #003A79;
+            transition: all 0.3s linear;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .cta-calculate:hover {
+            background-color: rgba(247, 141, 40, 0.5);
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #myDIV1,
+        #myDIV2,
+        #myDIV3 {
+            background-color: #E2E2E2;
+            padding: 25px 42px;
+        }
+
+        #myDIV1 img,
+        #myDIV2 img,
+        #myDIV3 img {
+            display: block;
+            margin: 25px auto;
+        }
+
+        #myDIV1 h3,
+        #myDIV2 h3,
+        #myDIV3 h3 {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            font-weight: bold;
+            color: #003A79;
+            font-style: normal;
+        }
+
+        #myDIV1 h3:before,
+        #myDIV2 h3:before,
+        #myDIV3 h3:before {
+            content: "";
+            flex: 1 1;
+            border-bottom: 1px solid #003A79;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        #myDIV1 h3:after,
+        #myDIV2 h3:after,
+        #myDIV3 h3:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 1px solid #003A79;
+            margin: auto;
+            margin-left: 10px
+        }
+
+        /* The container */
+        .containerBox {
+            display: block;
+            position: relative;
+            padding: 0px 0px 0px 30px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 18px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Hide the browser's default checkbox */
+        .containerBox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .check {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            border: #A0A2A3 solid 1px;
+            border-radius: 2px;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .containerBox:hover input~.check {
+            background-color: #ffffff;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .containerBox input:checked~.check {
+            background-color: #003A79;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .check:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .containerBox input:checked~.check:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .containerBox .check:after {
+            left: 6px;
+            top: 3px;
+            height: 7px;
+            width: 3px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .bonus hr {
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: #00B3E7;
+            margin: 45px auto;
+        }
+
+        .bonus h3 {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .bonusinfo {
+            background-color: #efefef;
+            margin: 20px 0px;
+            padding: 10px 10px 10px 85px;
+            position: relative;
+        }
+
+        .bonusinfo:before {
+            content: "";
+            background-image: url(https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/bonusinfo.ashx);
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 39px;
+            height: 46px;
+        }
+
+        .itemrow {
+            padding: 8px 25px;
+            width 100%;
+            max-width: 307px;
+            margin: auto;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .itemrow:nth-child(odd) {
+            background-color: #F5F5F5;
+        }
+
+        .itemleft {
+            margin-right: 5px;
+            width: 35px;
+            float: left;
+            text-align: right;
+        }
+
+        .itemcenter {
+            width: 65%;
+            float: left;
+            content: "";
+            border-top: 4px dotted #00B3E7;
+            margin-top: 10px;
+        }
+
+        .itemright {
+            width: 60px;
+            margin-left: 5px;
+            float: left;
+            text-align: left;
+        }
+
+        .textBtn {
+            display: block;
+            text-align: center;
+            padding-top: 10px;
+            color: #003A7D !important;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+
+        .titleLink:after {
+            background: url('https://locations.desertfinancial.com/permanent-b0b701/assets/images/arrow.752a5033.svg');
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            height: 1.25rem;
+            margin-left: .375rem;
+            margin-top: 0.15rem;
+            padding-right: 1.25rem;
+            position: absolute;
+        }
+
+        .textBtn:hover .titleLink:after {
+            margin-right: 0;
+            padding-left: .75rem;
+        }
+
+        @media screen and (max-width: 831px) {
+            span.titleLink {
+                font-size: 3rem !important;
+            }
+
+            .titleLink:after {
+                height: 3.25rem !important;
+                margin-left: -13rem !important;
+                width: 50% !important;
+            }
+
+            .givingContent {
+                width: auto;
+                margin: 0 34px;
+                padding: 30px 0px;
+                background: none;
+            }
+
+            .noticeContent {
+                width: auto;
+                margin: 0 34px;
+                padding: 30px 0px;
+                background: none;
+            }
+
+            .givingColumn {
+                width: 100%;
+                border-top: 20px solid #EFEFEF;
+                background: #E9E9E9;
+            }
+
+            .flexLiks>div {
+                float: left;
+                margin-bottom: 20px;
+            }
+
+            .welcome {
+                font-size: 14px;
+            }
+
+            .welcome strong {
+                font-size: 22px;
+            }
+
+            .welcomeContainer {
+                width: auto;
+                margin: 0px 48px;
+            }
+
+            .welcome img {
+                margin: -10px auto -10px auto;
+            }
+
+            .welcomeTitle {
+                height: 106px;
+                margin-bottom: 46px;
+            }
+
+            .welcomeTitle h1 {
+                font-size: 34px;
+                margin: -5px;
+            }
+
+            .welcomeTitle h2 {
+                font-size: 24px;
+                margin: 0px;
+                padding: 22px 0px 0px
+            }
+
+            .welcome .cta-secondary {
+                margin: 50px auto 30px auto;
+            }
+
+            .header {
+                height: 72px;
+            }
+
+            .header h1 {
+                font-size: 19px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: -0.5px;
+                margin: -2px;
+            }
+
+            .header h2 {
+                font-size: 13px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: -0.5px;
+                margin: 0px;
+                padding: 15px 0px 0px
+            }
+
+            .left-column {
+                width: 50%;
+                height: 72px;
+            }
+
+            .left-column img {
+                float: left;
+                height: auto;
+                width: 114px;
+                margin-top: 4px;
+            }
+
+            .right-column {
+                width: 72px;
+                height: 72px;
+            }
+
+            .mainMenu {
+                right: 0;
+            }
+
+            .container {
+                margin-top: 18px;
+            }
+
+            .last {
+                margin-right: 39px !important;
+            }
+
+            .splide__arrows {
+                display: block;
+            }
+
+            .splide__arrow {
+                height: 61px;
+                width: 61px;
+                color: #ffffff;
+            }
+
+            .splide__arrow svg {
+                fill: #ffffff;
+            }
+
+            .splide__arrow--prev {
+                background: linear-gradient(90deg, rgba(0, 179, 231, 1.0) 40%, rgba(0, 179, 231, 0.0) 100%);
+            }
+
+            .splide__arrow--next {
+                background: linear-gradient(90deg, rgba(0, 179, 231, 0.0) 0%, rgba(0, 179, 231, 1.0) 60%);
+            }
+
+            .itemTab {
+                margin: 19px 16px 0px;
+            }
+
+            .itemTabContainer {
+                margin: 30px 42px;
+            }
+
+            .cta-secondary {
+                width: 100%;
+                margin: 50px auto 0px auto;
+            }
+
+            .footer {
+                height: 37px;
+                margin-top: 34px;
+            }
+
+            .footer p {
+                margin-top: 10px;
+            }
+
+            .module {
+                height: calc(100% - 72px);
+            }
+
+            .moduleContainer {
+                padding: 20px 0px 21px 0px;
+            }
+
+            .moduleContainerGrey {
+                padding: 20px 0px;
+            }
+
+            .ModuleTitle {
+                margin: 0px 16px 0px 16px;
+            }
+
+            .moduleContent {
+                width: auto;
+                margin: 0 34px;
+            }
+
+            .videoContainer {
+                width: auto;
+                padding: 0px;
+                background: none;
+            }
+
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                /* 16:9 */
+                height: 0;
+            }
+
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .videoWrapper-js {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .videoWrapper-js iframe {
+                width: 600px;
+                height: 400px;
+                margin: auto;
+            }
+
+            .moduleContent H1 {
+                margin: 15px 0px 62px 0px;
+            }
+
+            .equity {
+                margin: 20px -30px;
+                padding: 20px 30px 20px 92px;
+            }
+
+            .equity:before {
+                left: 30px;
+            }
+
+            .equity .left {
+                width: 100%;
+                padding-left: 43px;
+            }
+
+            .equity .right {
+                width: 100%;
+            }
+
+            .right:before {
+                content: "";
+                top: 22px;
+                left: 0px;
+                height: 4px;
+                width: 24px;
+                background: #F78D28;
+                position: absolute;
+            }
+
+            /*CALCULATOR*/
+            .textfield {
+                float: none;
+                width: 100%;
+            }
+
+            .MonthlyContainer {
+                width: 100%;
+            }
+
+            .product__calculator {
+                margin: 0;
+            }
+
+            .CalculatorContainer {
+                display: block;
+            }
+
+            label.containerInput {
+                display: block;
+            }
+
+            .input-text {
+                width: 100%;
+                float: none;
+            }
+
+            .MonthlyContainer {
+                width: 100%;
+                margin: 30px 0 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--- Welcome Screen --->
+    <section id="welcome" class="welcome"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/DF%20Logo_ReversedFinancial_TM.ashx" alt="">
+        <div class="welcomeTitle">
+            <h2>New Member</h2>
+            <h1><span>Welcome</span> Center</h1>
+        </div>
+        <div class="welcomeContainer">
+            <p><em><strong>Hey, it’s you!</strong></em></p>
+            <p>We’re so happy to have you here. Now that you’ve joined Desert Financial, you might be wondering what to do next.</p>
+            <p>These modules will walk you through everything you need to know about banking with us — including a few phenomenal perks of your new membership (hint: cha-ching!). </p>
+            <div class="cta-secondary" onClick="closeWelcomeFunction()">Ready … Set … GO! </div>
+        </div>
+    </section>
+    <!--- Header --->
+    <section class="header">
+        <h2> New Member</h2>
+        <h1><span>Welcome</span> Center</h1>
+        <section class="left-column"><a href="https://www.desertfinancial.com/personal?elqTrackId=6f374791540d4324a7b03f2aeff36ae5"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/DF%20Logo_ReversedFinancial_TM.ashx" alt=""></a></section>
+        <section class="right-column">
+            <div id="menuIcon" class="container" onclick="menuFunction();menuIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </section>
+    </section>
+    <!--- Menu Drop Down --->
+    <div id="menuLinks" class="mainMenu" onmouseout="menuFunction();menuIcon(this)"> <a class="show" target="1">
+            <div class="menuItem firstitem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 1</h2>
+                    <h1>Getting Started</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="2">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 2</h2>
+                    <h1>FINDING US & GOING MOBILE</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="3">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 3</h2>
+                    <h1>PAYING BILLS & SENDING MONEY</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="4">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 4</h2>
+                    <h1>CLOSING YOUR OLD ACCOUNTS</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="5">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 5</h2>
+                    <h1>ALL ABOUT REWARDS</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="6">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 6</h2>
+                    <h1>HOME & AUTO</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="7">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 7</h2>
+                    <h1>EVERYTHING ELSE UNDER THE SUN</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="8">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 8</h2>
+                    <h1>ANNUAL CASH BONUSES</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="9">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 9</h2>
+                    <h1>GIVING BACK & GETTING MORE</h1>
+                </div>
+                <hr>
+            </div>
+        </a> <a class="show" target="10">
+            <div class="menuItem">
+                <div class="arrowRight">
+                    <div class="arrow">
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                    </div>
+                </div>
+                <div class="menuTitle">
+                    <h2>Module 10</h2>
+                    <h1>YOUR CREDIT UNION</h1>
+                </div>
+            </div>
+        </a> </div>
+
+    <!--- Module 1 --->
+    <section id="module1" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_GettingStarted-Blue.ashx" height="121px" alt="">
+                <h2>Module 1</h2>
+                <h1>Getting Started</h1>
+            </div>
+            <div class="moduleContent">
+                <h3>Hey there, smartie!</h3>
+                <p>You’ve made the right choice joining Desert Financial. We’re here to help you get the knowledge you need to start managing your money the easy way. </p>
+                <p>The first step on your financial journey is learning to navigate our New Member Welcome Center. Watch the brief video tutorial below to learn your way around. Then, continue down the page to complete the rest of the steps in Module 1. (Just a few easy tasks, we promise!)</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>Online Banking & The Desert Financial Mobile App</h1>
+                <p>Now that you have the basics down, you’ll want to set up contactless banking using Online Banking and the Desert Financial Mobile app. These convenient tools allow you to access your accounts 24/7, move your money around and apply for new loans on any Wi-Fi-enabled device. <strong>Go ahead, you got this!</strong> </p>
+                <h3>How to Sign Up for Online Banking</h3>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VeLa5q4FJz0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p>Visit <a href="https://www.desertfinancial.com/personal?elqTrackId=3b9a8b9beb304c55860271b6c377b8f4" target="_blank">DesertFinancial.com</a>. On the right, click <strong>Sign Up Now</strong>.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p>Choose <strong>Register as an Individual</strong>.</p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p>Read and accept the disclosure and scroll down to <strong>check the box marked <em>I Agree</em></strong>. Click Continue. </p>
+                </div>
+                <div class="numberBullet">4</div>
+                <div class="information">
+                    <p>Provide your <strong>information</strong> to confirm your <strong>identity</strong>. Click Continue.</p>
+                    <p>(Your account number is listed on your new account paperwork. Only the first 10 numbers of your account/member number are required — omit the hyphen and four zeroes.) </p>
+                </div>
+                <div class="numberBullet">5</div>
+                <div class="information">
+                    <p>Choose a <strong>username</strong> and select if you would like to receive your temporary <strong>password</strong> by email or text. Click Continue</p>
+                </div>
+                <div class="numberBullet">6</div>
+                <div class="information">
+                    <p>Check your email/text messages. Enter your temporary password to authenticate and click <strong>Log In</strong>.</p>
+                </div>
+                <div class="numberBullet">7</div>
+                <div class="information">
+                    <p>Create a <strong>New Password</strong> and Confirm. Click Continue. </p>
+                </div>
+                <div class="numberBullet">8</div>
+                <div class="information">
+                    <p>Next, confirm your <strong>contact information</strong> and click Continue.</p>
+                    <p>That’s it! Log in to Online Banking anytime, anywhere at DesertFinancial.com or use our handy mobile app to manage your accounts. Now, about that app … </p>
+                </div>
+                <hr>
+                <h3>Downloading the Desert Financial Mobile App</h3>
+                <p>Visit your device’s app store and type <strong><em>Desert Financial</em></strong> in the search box. </p>
+                <div class="apps"> <a href="https://itunes.apple.com/us/app/desert-schools-mobile-banking/id530666695?mt=8&elqTrackId=3e2369243f874af4bc1b4e1fbff5966c" target="_blank"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/app%20store.ashx" alt="" style="margin-right: 15px;"></a> <a href="https://play.google.com/store/apps/details?id=com.desertschools.mobilebanking&elqTrackId=ff244c2f48ed4d25a5b828b817765215" target="_blank"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/google%20pay.ashx" alt=""></a> </div>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p>Choose Desert Financial Mobile and <strong>Install</strong>.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p>Click <strong>Open</strong> and answer the location prompt.</p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p>If you already have an Online Banking login, enter your username/password here and click <strong>Log In</strong>. If not, follow the easy instructions above.</p>
+                </div>
+                <div class="numberBullet">4</div>
+                <div class="information">
+                    <p>Select <strong>Snapshot</strong> if you’d like to view your balances immediately whenever you open the app.</p>
+                    <p><strong>That’s it!</strong> You’re ready to start banking on the go. </p>
+                </div>
+                <hr>
+                <h3>Using Online Banking and the Mobile App</h3>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kbq3OmILzS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>Inside the app, <strong>click the menu bar</strong> in the top left corner to see all the things you can do. We call these widgets, but you can call them tasks, menu items or your “can-do” list — whatever makes your soul sing. If you’re using an iPhone, your main menu will be at the bottom of the page. </p>
+                <p>In Online Banking, these widgets appear in gray boxes on the left side of the page (or in the drop-down menu &nbsp;<img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/ddmenu.ashx" alt="">&nbsp; on mobile). </p>
+                <p>Here are some things you can do inside the app AND in Online Banking.</p>
+                <p><strong>Feel free to look around!</strong></p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>View Balances:</strong> Once you log into the app, you’ll see an overview of your account balances. Click on each account to see Transactions and Account Details. For iPhone, click Accounts in the bottom main menu to return to your Accounts view. For Android, click the back arrow next to the account name to return to your Accounts view. If you choose Snapshot, you’ll also get a sneak peek at your account balances whenever the app opens, a pretty sweet feature that most bank apps don’t have!</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>View Accounts:</strong> To view specific account details, click <strong>Accounts</strong> in the main menu, then choose your account.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>View Statements:</strong> Under More (or More Widgets) in the main menu, click eStatements. Click the View eStatements button. Click on the statement month you’d like to view. (Note: If you are not currently enrolled in eStatements, you can enroll here.)</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>See a Transaction:</strong> Click on a transaction for specifics, like where and when that purchase was made. ($118 at the Italian restaurant??? Guess it’s macaroni-from-a-box this week!) </p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Find Your Account Number:</strong> Select the account, click on Account Details and scroll to see the account number.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Transfer Money:</strong> Click <strong>Transfers</strong> in the Main Menu. Choose the accounts you want money deducted FROM and sent TO. Enter the transfer amount, review and click Complete Transfer. Easy-peasy.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Deposit Checks (app only):</strong> After signing your check, click <strong>Deposit Check</strong> in the bottom main menu for iPhone. Or tap the main menu and then <strong>Deposit Check</strong> for Android. Type your check amount under Deposit Amount. Tap Check Front and snap a picture of the front of your check. Repeat the process for Check Back. Tap Deposit Check to complete your deposit. Watch our <a href="https://youtu.be/uiQ7C_RQK7w?elqTrackId=e29d24a74d554943b40426cb4bc70941" target="_blank">Remote Check Deposit video</a> for more details. </p>
+                </div>
+                <p>There’s lots more to do and see, but there’s plenty of time to dig deeper. In the meantime, pat yourself on the back for completing Module 1 — and <strong>check the box below so we know how awesome you are!</strong></p>
+                <div class="cta-module" onClick="closeModule1Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+            </div>
+        </div>
+    </section>
+    <!--- Module 2 --->
+    <section id="module2" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_FindingUsGoingMobile-Blue.ashx" height="121px" alt="">
+                <h2>Module 2</h2>
+                <h1>Finding Us & Going Mobile</h1>
+            </div>
+            <div class="moduleContent"></div>
+        </div>
+
+
+        <span elqid="97" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>We hope you’re loving your new Desert Financial accounts! Let’s look at some simple ways to make your daily banking even more convenient.</p>
+                <h1>All About Direct Deposit</h1>
+                <p>With direct deposit, you can have paychecks deposited right into your Desert Financial account. First, check with your employer or the Social Security Administration to see if you are eligible for direct deposit. Got a “yes”? Awesome! There’s only one more step.</p>
+                <p>Fill out and submit their print or digital enrollment form.<strong> For this, you’ll need two things:</strong></p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Our routing number: <strong>122187238</strong></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Your 14-digit account number: To find it, log in to Online Banking and click the name of the account you want your funds deposited into. Click on the Account Details tab and look for the <strong>DIRECT DEPOSIT AND ACH TRANSACTIONS ACCOUNT NUMBER</strong> located about halfway down the page.</p>
+                </div>
+                <p>It might take a paycheck or two before your direct deposit goes into effect. After that, your payments will magically appear in your account — abracadabra! </p>
+                <hr>
+                <h1>Setting Up Your Digital Wallet</h1>
+                <p>A digital wallet lets you pay for purchases virtually, without the need for a physical credit/debit card. This contactless payment option is typically an app where you store your payment methods electronically. At a merchant, you would unlock your phone and hold it near the contactless reader to pay. Popular contactless payment apps include <a href="https://www.desertfinancial.com/personal/checkings-savings/checking-overview/online-and-mobile/Mobile-Pay?elqTrackId=3c561d4758454b528807f0887c32c361">Apple Pay, Google Pay and Samsung Pay</a>.</p>
+                <p>Watch our Contactless Payments video for a quick tutorial:</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UXSXD-dLzn8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p><strong>Open</strong> the app on your phone. </p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p><strong>Add</strong> your payment method by taking a digital photo of your card (front and back).</p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p>Follow the instructions to <strong>add</strong> your card to the wallet. </p>
+                </div>
+                <p>Now your phone doubles as a wallet for online and in-store payments. Cha-ching!</p>
+                <hr>
+                <h1>How to Order Checks</h1>
+                <p>Even with all the digital options available, it’s smart to have an old-fashioned check on-hand. Simply log in to Online Banking or the Desert Financial app, visit a branch or call us at <a href="tel:602-433-5626">(602) 433-5626</a> to order checks. </p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Inside Online Banking, select the <strong>More</strong> widget and choose Checking Services ► Reorder Checks ► Order Checks.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>In the app, select <strong>Checking Services</strong> from the Main Menu (or More widget on iPhone), then tap <strong>Order Checks</strong>.</p>
+                </div>
+                <hr>
+                <h1>ATMs: Where They Are & How to Find Them</h1>
+                <p>Just type “Desert Financial near me” or “Desert Financial ATM” into Google or Apple Maps to find a Desert Financial branch or ATM. Click on the branch name to view details.</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>You can also use our handy <a href="https://locations.desertfinancial.com/search?elqTrackId=0dce1fba82324e768164b14020ba6707">Desert Financial branch locator</a>.</p>
+                </div>
+                <p>Need a quick ATM refresher? Peep this:</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7h5S0Ib9ZfE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h3>More ATM Options!</h3>
+                <p>Of course, there’s no fee to use a Desert Financial ATM! But did you know you also have surcharge-free access to nearly <a href="https://co-opcreditunions.org/locator/?elqTrackId=dc4464da5ab94e73a5c88864b6b58da4" target="_blank">30,000 ATMs worldwide</a> through the CO-OP ATM Network? That could come in handy when you’re traveling!</p>
+                <p>Looks like you breezed right through Module 2. Virtual fist-bump!</p>
+                <p><em><strong>Click the box below to indicate you’re ready to move on.</strong></em></p>
+                <div class="cta-module" onClick="closeModule2Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <span elqid="98" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 3 --->
+    <section id="module3" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_PayingBillsSendingMoney-Blue.ashx" height="121px" alt="">
+                <h2>Module 3</h2>
+                <h1>Paying Bills & Sending Money</h1>
+            </div>
+            <div class="moduleContent">
+
+            </div>
+        </div>
+        <span elqid="97" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+
+                <p>Paying bills isn’t exactly fun, so the least we can do is make it easy! In this module, we’ll walk you through how to make automatic bill payments, transfer funds and reorder checks. </p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cRnbAGNq27A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>Paying Bills in Online Banking</h1>
+                <p>If you have a checking account with Desert Financial, you can set up automatic payments in Online Banking or through the Desert Financial mobile app.</p>
+                <p>Click the Bill Pay widget in the main menu to get started. Read the disclosure and click Agree to continue. </p>
+                <p>You’ll see the <strong>Payment Center</strong> screen.</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Select</strong> a bill category. Let’s use Utilities as an example</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Scroll</strong> to find your company.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Enter</strong> your account number and any additional information. </p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Choose</strong> your payment amount and delivery date.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Click</strong> <em>Make Payment</em>. You’ll receive a confirmation page with the details of your payment!</p>
+                </div>
+                <hr>
+                <h1>How to Transfer Funds</h1>
+                <p>You can also use Online Banking or the app to transfer funds between your Desert Financial accounts, to another Desert Financial member or a third-party.</p>
+                <p>Start by clicking <strong>Transfers</strong> in the main menu. </p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Use <em><strong>Quick</strong></em> for transferring funds between your accounts and for loan payments. Choose the <em><strong>Classic</strong></em> tab if you wish to transfer funds to another Desert Financial member. You will need to enter their name and account number. </p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Choose</strong> the account you want the money deducted from, the transfer amount and the internal or external account you want to send the money to.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Click</strong> <em>Submit Transfer</em>. You will see a screen with the transaction details. Click Confirm Transfer to transfer your funds.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>You will see a confirmation screen with your transfer information</p>
+                </div>
+                <div class="tip">
+                    <p><strong>TIP:</strong><br />
+                        <strong>Click</strong> <em>Scheduled</em> to view your upcoming transfers.
+                    </p>
+                    <p><strong>Click</strong> <em>History</em> to see your past transfers.</p>
+                </div>
+                <hr>
+                <h1>Using Person-to-Person Payment Apps</h1>
+                <p>Apps like <em>Venmo, Zelle®</em> and <em>PayPal</em> let you directly pay another person using your bank account, credit card or debit card. You can also receive money in these apps, which can then be used to pay someone else or transferred into your bank account (sometimes for a small fee).</p>
+                <p>Follow these simple steps to make a payment:</p>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p>Download the payment app.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p>Set up a new account by following the prompts in the app, including any steps for verification and passwords to increase security. You may be asked to provide a bank account, credit card or debit card number, along with confirmation details to ensure you are the card or account holder. </p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p>Search for the recipient by phone number, email address, username or Facebook account (if you choose to sync to that social platform). </p>
+                </div>
+                <div class="numberBullet">4</div>
+                <div class="information">
+                    <p>Enter the amount and follow the app’s sending instructions to make your payment! </p>
+                </div>
+                <hr>
+                <p>All done? Give yourself a gold star — and <em><strong>don’t forget to check the box below to let us know you’re all set.</strong></em></p>
+                <div class="cta-module" onClick="closeModule3Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <span elqid="98" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 4 --->
+    <section id="module4" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_ClosingOldAccounts-Blue.ashx" height="121px" alt="">
+                <h2>Module 4</h2>
+                <h1>Closing Your Old Accounts</h1>
+            </div>
+            <div class="moduleContent">
+
+            </div>
+        </div>
+        <span elqid="97" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>You found each other and it was great … for a while. But now you’ve broken up with your old bank and it’s time to move on. Find out how to make the switch!</p>
+                <h1>Saying Goodbye to Your Old Bank</h1>
+                <p>It’s easy to move your old accounts over to Desert Financial. Follow these steps to clear out the banking clutter and start fresh.</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Close your old accounts.</strong> Check with your old financial institution to see how it’s done — some banks will allow you to close accounts online or with a written letter, while others require you to call or visit a branch.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Don’t forget your money!</strong> You can either withdraw your funds before you close your account or have the financial institution cut you a check after the account has been closed (it could take a while).</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Transfer any automatic payments.</strong> Do you have automatic deductions set up for rent or mortgage payments, utilities, TV subscriptions, auto loans or any other services? Contact each one to update your payment information. <strong>Tip:</strong> Many creditors allow you to update your payment information online. </p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><strong>Look at your loans.</strong> If you have mortgage or auto loans with another financial institution, you may want to consider having them all in one place. Contact us at 602-433-5626 or visit <a href="https://www.desertfinancial.com/?elqTrackId=25e929867b86439a9e2866bbeda34386">DesertFinancial.com</a> to learn more about refinancing. You can also apply for a loan online or through Online Banking!</p>
+                </div>
+                <p>While you’re here, there’s one more quick step to take:</p>
+                <hr>
+                <span elqid="93" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+            </div>
+        </div>
+        <span elqid="95" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <span elqid="94" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                <span elqid="96" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                <div class="cta-module" onClick="closeModule4Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <span elqid="98" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 5 --->
+    <section id="module5" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_Rewards-Blue.ashx" height="121px" alt="">
+                <h2>Module 5</h2>
+                <h1>All About Rewards</h1>
+            </div>
+            <div class="moduleContent">
+                <p>It’s good to see you again! Now that you have your new accounts in order, let’s dive into the fun stuff — starting with an awesome member perk. </p>
+                <p><strong>Relationship Rewards</strong> is our free membership rewards program. It works a lot like the rewards programs at your favorite coffee shop or independent bookstore. The stronger the relationship you build with Desert Financial, the more rewards you can earn. </p>
+                <h1>How to Earn Rewards</h1>
+                <p>Your rewards level is calculated on a monthly basis. Each month, you can earn:</p>
+                <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/trensaction.ashx" style="margin: 0 0 -20px 0;" alt="">
+                <p>$500 direct deposit OR 25+ checking transactions</p>
+                <hr>
+                <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/saving.ashx" style="margin: 25px 0 -27px 0;" alt="">
+                <p>At least $10,000 in combined deposit and investment<sup>6</sup> balances</p>
+                <hr>
+                <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/borrowing.ashx" style="margin: 25px 0 -20px 0;" alt="">
+                <p>Current mortgage, home equity or auto loan</p>
+                <p><strong>Points are calculated per household. So, if someone in your household has a point, you get that point too!</strong></p>
+                <p><em>There’s also a bonus point for 20-year loyalty that you can earn later down the road — more than 20% of member households qualify for this point!</em></p>
+                <p><strong>The maximum number of points you can earn is 3.</strong></p>
+                <hr>
+                <h1>Rewards Levels </h1>
+                <p>There are three rewards levels based on your relationship with Desert Financial:</p>
+            </div>
+        </div>
+        <div class="moduleContainerGrey">
+            <div class="moduleContent">
+                <div class="memberNumber">
+                    <p>1</p>
+                </div>
+                <div class="memberDashLight">
+                    <div class="memberVoid">
+                        <div class="memberName"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/member.ashx" alt=""></div>
+                    </div>
+                </div>
+                <div class="memberPoint">
+                    <p>You have<br>
+                        <strong>0-1 point</strong>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <hr>
+            <div class="moduleContent">
+                <div class="memberNumber">
+                    <p>2</p>
+                </div>
+                <div class="memberDashDark">
+                    <div class="memberVoid">
+                        <div class="memberName"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/rewards-member.ashx" alt=""></div>
+                    </div>
+                </div>
+                <div class="memberPoint">
+                    <p>You have<br>
+                        <strong>2 points</strong>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <hr>
+            <div class="moduleContent">
+                <div class="memberNumber">
+                    <p>3</p>
+                </div>
+                <div class="memberDashOrange">
+                    <div class="memberVoid">
+                        <div class="memberName"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/rewards-plus.ashx" alt=""></div>
+                    </div>
+                </div>
+                <div class="memberPoint">
+                    <p>You have<br>
+                        <strong>3 points</strong>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>What You Get at Each Rewards Level</h1>
+                <p><strong>Member</strong> (0‐1 points)</p>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Free Checking, with no minimum balance and no monthly service fees<sup>5</sup></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free services & member discounts</p>
+                </div>
+                <hr class="spacer">
+                <p><strong>Rewards Member</strong> (2 points)</p>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Free Checking, with no minimum balance and no monthly service fees<sup>5</sup></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free services & member discounts</p>
+                </div>
+                <div class="dotted">
+                    <div class="void">
+                        <div class="and">&</div>
+                    </div>
+                </div>
+                <div class="arrowBullet" style="margin-top: 25px;"></div>
+                <div class="information">
+                    <p><strong>.25% Rate discount</strong> on Consumer Loans<sup>1</sup></p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Cash back with Member Giveback Bonus<sup>2</sup></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Non-Desert Financial ATM fee waivers</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free custom checks</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free debit card replacement</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free money orders & cashier’s checks</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free stop payments</p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Up to <strong>$100 discount</strong> on Wills & Trusts<sup>4</sup></p>
+                </div>
+                <hr class="spacer">
+                <p><strong>Rewards+ Member</strong> (3 points)</p>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Free Checking, with no minimum balance and no monthly service fees<sup>5</sup></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free services & member discounts</p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p><strong>.50% Rate discount</strong> on Consumer Loans<sup>1</sup></p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Cash back with Member Giveback Bonus<sup>2</sup></p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Non-Desert Financial ATM fee waivers</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free custom checks</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free debit card replacement</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free money orders & cashier’s checks</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free stop payments</p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information">
+                    <p>Up to <strong>$150 discount</strong> on Wills & Trusts<sup>4</sup></p>
+                </div>
+                <div class="dotted">
+                    <div class="void">
+                        <div class="and">&</div>
+                    </div>
+                </div>
+                <div class="arrowBullet" style="margin-top: 18px;"></div>
+                <div class="information">
+                    <p>Free overdraft protection transfers</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Free incoming wires</p>
+                </div>
+                <div class="arrowBullet" style="margin-top: 10px;"></div>
+                <div class="information" style="margin-bottom: 40px;">
+                    <p>Rebates of ATM fees/surcharges by other institutions<sup>3</sup></p>
+                </div>
+                <hr>
+                <h1>How to Earn More Points</h1>
+                <p>With Desert Financial’s Relationship Rewards program, it’s easy to level up and earn more rewards! Here are some simple ways to earn extra points:</p>
+            </div>
+        </div>
+        <div class="moduleContainerGrey">
+            <div class="moduleContent">
+                <p><strong>TRANSACTING</strong></p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Set up automatic bill pay for monthly bills</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Have your paycheck directly deposited into a Desert Financial account</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Use your debit card to:</p>
+                    <ul>
+                        <li>Buy gas</li>
+                        <li>Pay for your morning coffee</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="moduleContent">
+                <p><strong>SAVING</strong></p>
+                <p>To save $10,000, try:</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Using our free budgeting tool on the Desert Financial app</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Automating monthly transfers to savings</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Getting a savings certificate with Desert Financial</p>
+                </div>
+            </div>
+            <hr>
+            <div class="moduleContent">
+                <p><strong>Borrowing</strong></p>
+                <p>Earn one point when you get a loan for one or more of these things:</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Buying a home</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Purchasing a vehicle</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Opening a Home Equity Line of Credit</p>
+                </div>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>That’s it! Reward yourself for completing this module by <em><strong>checking the box below</strong></em> — and maybe taking yourself out for ice cream. We’re big fans of chocolate fudge ripple.</p>
+                <div class="cta-module" onClick="closeModule5Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <small>
+                    <p><sup>1</sup>For consumer and home equity loans, subject to credit approval and applies to new money loans. May not be combined with any other rate discounts or promotional offers.</p>
+                    <p><sup>2</sup>Must be Rewards Member or Rewards+ Member for a minimum of six months per calendar year to be eligible for cash back. Additional restrictions apply. See Statements of Terms, Conditions and Disclosures for full details.</p>
+                    <p><sup>3</sup>Up to $50 per checking account.</p>
+                    <p><sup>4</sup>Document preparation services are offered through Desert Financial Credit Union; an Arizona Supreme Court Certified Legal Document Preparation Business Entity (CLDP #81024). Legal document preparation services are not insured by the NCUA and have no credit union guarantee.</p>
+                    <p><sup>5</sup>Must open or convert to Free Checking product to qualify. Membership Checking may incur a fee in accordance with the Fee Schedule. Primary account holder must be 18 years or older and meet Desert Financial’s membership eligibility and credit qualification requirements, including opening a Membership Savings account with a minimum balance of $25. Checking is free; however, fees incurred — such as a stop payment or NSF fee — will apply. For complete terms and conditions, refer to the published Statements of Terms, Conditions and Disclosures booklet.</p>
+                    <p><sup>6</sup>Investment advisory services offered through Raymond James Financial Services Advisors, Inc. Securities offered through Raymond James Financial Services, Inc., Member FINRA/SIPC, and are not insured by credit union insurance, the NCUA or any other government agency, are not deposits or obligations of the credit union, are not guaranteed by the credit union, and are subject to risks, including the possible loss of principal. Desert Financial Credit Union and Desert Financial Wealth Management are not registered broker/dealers and are independent of Raymond James Financial Services, Inc. 13875 N. Northsight Blvd. | Scottsdale, AZ 85260, 602-336-5531 </p>
+                </small>
+                <center>
+                    <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/ncua.ashx" alt="">
+                </center>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 6 --->
+    <section id="module6" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_HomeAndAuto-Blue.ashx" height="121px" alt="">
+                <h2>Module 6</h2>
+                <h1>Home & Auto</h1>
+            </div>
+            <div class="moduleContent">
+                <p>Buying a car and a home are two of the biggest purchases you’ll ever make, so we want to make sure you have all the information you need to get there. Don’t feel pressured to reach these milestones right now. We’re over here chilling on standby until you need us!</p>
+                <p>In the meantime, here’s some information on auto and home loan options to get you started:</p>
+                <h1>Auto Refi</h1>
+                <p>Love your car but not your payment? An auto refinance, or auto refi, could be what you’re looking for. With an auto refi, the lender will pay off your old auto loan and give you a new loan for the remaining balance on your vehicle. With a refi, you could potentially lower your payments and/or get a lower interest rate.</p>
+                <h3>Four Reasons to Consider a Refi</h3>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p><strong>LOWER INTEREST RATES:</strong><br>
+                        If your credit score has improved since you first purchased your vehicle, you may be eligible for lower interest rates. Even if your credit score has remained stable, interest rates may have dropped. There’s no need to stick with your current lender unless you’re getting the absolute best deal.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p><strong>LOWER PAYMENTS:</strong><br>
+                        You can lower your monthly payment amount on your current vehicle with a refinance by:</p>
+                    <div class="arrowBullet"></div>
+                    <div class="information">
+                        <p>Extending your terms<br>
+                            (for example, if you have 14 months left you could get a 2- or 3-year auto refi loan),</p>
+                    </div>
+                    <div class="arrowBullet"></div>
+                    <div class="information">
+                        <p>Getting a lower interest rate OR</p>
+                    </div>
+                    <div class="arrowBullet"></div>
+                    <div class="information">
+                        <p>A combination of both.</p>
+                    </div>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p><strong>FASTER REPAYMENT:</strong><br>
+                        Purchase a new vehicle and you’ll likely have five or six years of payments ahead of you again. On the other hand, if you refinance your existing car, truck or SUV, you could opt for a shorter loan term without feeling a pinch in your wallet. </p>
+                </div>
+                <div class="numberBullet">4</div>
+                <div class="information">
+                    <p><strong>CASH BACK AND OTHER OFFERS:</strong><br>
+                        You’re probably not getting anything special from your existing loan. Refinance your auto loan, though, and you may be able to snag a special deal that will put more money in your pocket. </p>
+                </div>
+                <p>Desert Financial offers a <a href="https://www.desertfinancial.com/personal/loans/auto-loans-overview/auto-refinancing?elqTrackId=db147b0cf9714082b815c30db78ceca5" target="_blank">refinance that we call our Auto Three-fi™</a> because it has <strong>three great perks</strong>: </p>
+                <p><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/AutoRefi Rates.ashx" alt="" style="width: 100%;"></p>
+                <hr>
+                <h1>Auto Loan</h1>
+                <p>If you’re in the market to buy a new or used car, truck or SUV, an auto loan can help you make your purchase. Here are the five major components that you’ll want to consider when buying a vehicle.</p>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p><strong>PURCHASE PRICE:</strong><br>
+                        The sale price of the vehicle. Many dealerships will allow you to negotiate this amount.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p><strong>DOWN PAYMENT:</strong><br>
+                        Your lender may require a down payment on your vehicle; aim for 20% down, although some lenders will accept less. </p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p><strong>LOAN AMOUNT:</strong><br>
+                        Your loan amount would be the total cost of your vehicle + taxes & fees – your down payment and any dealer incentives.</p>
+                </div>
+                <div class="numberBullet">4</div>
+                <div class="information">
+                    <p><strong>ANNUAL PERCENTAGE RATE (APR): </strong><br>
+                        The APR is the percent of your loan balance that a lender charges you annually for the loan. </p>
+                </div>
+                <div class="numberBullet">5</div>
+                <div class="information">
+                    <p><strong>TERMS: </strong><br>
+                        The length of your loan. Common terms include 60 and 72 months. </p>
+                </div>
+                <div class="numberBullet">6</div>
+                <div class="information">
+                    <p><strong>MONTHLY PAYMENT:</strong><br>
+                        The amount you pay on your auto loan each month, which depends on all of the factors above. Auto loans typically have a fixed APR, which means your payment amount does not fluctuate. </p>
+                </div>
+                <p>Try our handy loan calculator to estimate your monthly payment. </p>
+                <section class="product__calculator">
+                    <div class="calculator__cont" id="one">
+                        <h2>ESTIMATE MY <span style="color: #00B3E7;">MONTHLY PAYMENT</span></h2>
+                        <div class="product__boxes_calc">
+                            <div class="content">
+                                <form name="loandata">
+                                    <div class="CalculatorContainer">
+                                        <div class="input-text">
+                                            <form action="#">
+                                                <div class="textfield"> <span class="input-dollar left">
+                                                        <label class="slider-label">Loan Amount:</label>
+                                                        <input name="principal" type="number" class="textfield__input" pattern="-?[0-9]*(\.[0-9]+)?" onchange="calculate();" step="500" min="0">
+                                                    </span> </div>
+                                                <div class="textfield">
+                                                    <label class="slider-label">Loan Term: Months</label>
+                                                    <div class="slider__container">
+                                                        <select name="years" onchange="calculate();">
+                                                            <option value="36">36</option>
+                                                            <option value="48">48</option>
+                                                            <option value="60">60</option>
+                                                            <option value="72">72</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="textfield">
+                                                    <label class="slider-label">Interest Rate:</label>
+                                                    <label class="slider-value"><span id="p3"></span>%</label>
+                                                    <div class="slider__container">
+                                                        <input name="interest" type="number" class="textfield__input" value="[NewAuto]" placeholder="Interest Rate" pattern="-?[0-9]*(\.[0-9]+)?" onchange="calculate();" step="0.1" min="0" max="10">
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </form>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="MonthlyContainer ">
+                                            <p class="calculation-title">
+                                                <label class="slider-label ">Estimated Monthly Payment:</label>
+                                            </p>
+                                            <p class="installment-value">$ <span id="p1">0</span></p>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="clear"></div>
+                            </div>
+                            <p class="calc-disclosure"><small>Results received from this calculator are designed for comparative purposes only, and accuracy is not guaranteed.</small></p>
+                        </div>
+                    </div>
+                </section>
+                <p>View <a href="https://www.desertfinancial.com/personal/loans/auto-loans-overview/auto-purchase-loan?elqTrackId=042e5582845146ffb23ff7b3d15cb93a" target="_blank">current auto loan rates and specials</a> at Desert Financial.</p>
+                <hr>
+                <h1>Mortgage Loan</h1>
+                <p>Ready to buy a home? How exciting! Before you start picking out new furniture and paint colors, start with these two easy steps: </p>
+                <p><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/houseIcon.ashx" alt=""></p>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p><strong>SHOP FOR A HOME:</strong><br>
+                        For most homebuyers, this is the fun part! Consider using the <a href="https://homescout.homescouting.com/?elqTrackId=5a8fb4002bdd41e092a6bdc321a7a0c2" target="_blank">HomeScout</a> app to start your search. It’s quick, easy and has more listings than Zillow. Also consider working with a broker to find and secure your new home.</p>
+                    <div class="flexLiks">
+                        <div> <a href="https://homescout.homescouting.com/?elqTrackId=f72bb9c16376432db6c3a0aadea4b36c"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/HomeScoutColor.ashx" alt=""></a></div>
+                        <div><a href="https://itunes.apple.com/us/app/homescout/id1220570240?mt=8&elqTrackId=c666136197534880b64391889554a451"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/App%20Store.ashx" alt=""></a></div>
+                        <div> <a href="https://play.google.com/store/apps/details?id=com.hbm2.HomeScout&hl=en_US&elqTrackId=0c44e6d96d9f4cc7974f7341ca9b851a"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Google%20Pay.ashx" alt=""></a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="tip">
+                    <p><strong>TIP:</strong><br />
+                        You can score up to <strong>$500 </strong>toward closing costs if you use one of our Participating Real Estate Brokers.<sup>1</sup> Call <a href="tel:602-4333-4663">(602) 433-4663</a> for details.</p>
+                </div>
+                <p><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/thumbIcon.ashx" alt=""></p>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p><strong>GET PREQUALIFIED (OR PREAPPROVED) FOR A HOME LOAN:</strong><br>
+                        When you make an offer on a home, you’re required to either have a Prequalification Form (PQF) from a lender or disclose that you have not been prequalified. When you provide a prequalification, the seller knows that your income and assets have already been documented by the lender — which means that you’re more likely to get the financing you need to buy the home. </p>
+                </div>
+                <h3>Prequalification vs. Preapproval</h3>
+                <p>A prequalification estimates the loan amount you might be approved for, while preapproval tells you the specific loan amount you’re approved for with that lender.</p>
+                <p>Most lenders will look at four factors when preapproving you for a loan: your income, monthly expenses, down payment amount and your credit history. To qualify for a home loan through Define Mortgage Solutions (a subsidiary of Desert Financial), you must:</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Have a minimum credit score of 620 for conventional loans (lower credit scores may still qualify for FHA financing), and</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Have a minimum down payment of 3 percent for conventional loans, although some buyers may qualify for down payment assistance programs. </p>
+                </div>
+                <p>After these steps come the heart of the homebuying process, which includes steps from making an offer to completing loan paperwork, scheduling a home inspection, negotiating and closing. Check out our <a href="https://www.desertfinancial.com/personal/loans/home-loan-overview/mortgage-loans/Homebuying-Toolkit?elqTrackId=a00262799c0f4b449dd1e7ce9dd44c76" target="_blank">free Homebuying Toolkit</a> for step-by-step guides to finding and buying a home!</p>
+                <p>View <a href="https://www.desertfinancial.com/personal/loans/home-loan-overview/mortgage-loans?elqTrackId=83cd896878c84841ac7b3ea116d6fb36" target="_blank">current mortgage rates</a> at Desert Financial.</p>
+                <p><strong><em>Already have a mortgage?</em></strong> Consider refinancing with Desert Financial to potentially lower your monthly payment and/or interest rate.</p>
+                <hr>
+                <h1>Home Equity Line of Credit</h1>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UMzCAb9Cujk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>If you have equity in your current home, you could potentially borrow against that equity to have extra money for home upgrades or repairs, to pay bills or for another need. Equity is simply the difference between the value of your home and the amount you still owe on your mortgage. </p>
+                <div class="equity">
+                    <div>
+                        <div class="left">Current<br>
+                            HOME VALUE</div>
+                        <div class="right">Current<br>
+                            Mortgage Balance</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bottom">YOUR HOME EQUITY</div>
+                </div>
+                <p>A HELOC, or <a href="https://www.desertfinancial.com/news-and-knowledge/articles/How-Can-a-HELOC-Help-You?elqTrackId=8b73a2e342844b9bad1548dfa3e23076" target="_blank">home equity line of credit</a>, works similarly to a credit card. You may withdraw some or all of your HELOC funds as you need them during your draw period (typically, 5 to 10 years).</p>
+                <p>HELOCs typically have variable rates, which means your interest rate will fluctuate up and down with the market. Lenders such as Desert Financial offer a fixed-rate HELOC option which allows you to cement your interest rate when you withdraw funds. </p>
+                <p>Benefits of a HELOC include:</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Flexible and easy-to-use</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Withdraw funds only as you need them</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Fixed-rate option available to help you plan your payments</p>
+                </div>
+                <p>This type of loan works well for situations where you may need the money in smaller increments over time — for example, if you’re planning to complete several remodeling projects in the coming years.</p>
+                <p>View <a href="https://www.desertfinancial.com/personal/loans/home-loan-overview/home-equity-line-of-credit?elqTrackId=825e2d153444476da01d5ff78b6cab7c" target="_blank">current HELOC rates and specials</a> at Desert Financial.</p>
+                <hr>
+                <p>Whew! That’s a lot of new info to tackle in one day. It’s time to kick back, relax and … <strong>check the box to complete this module.</strong></p>
+                <div class="cta-module" onClick="closeModule6Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <small>
+                    <p>Mortgage loans are offered by Define Mortgage Solutions, LLC, NMLS ID #1761612, a subsidiary of Desert Financial Credit Union. BK#0949053</p>
+                    <p><sup>1</sup>Participation in the Real Estate Broker Program is voluntary. Desert Financial Credit Union and its subsidiary Define Mortgage Solutions LLC do not receive any benefit, monetary or otherwise, from the Participating Broker under this program. Participating Brokers are non-affiliated third parties of Define Mortgage Solutions LLC and Define Mortgage Solutions LLC makes no warranties or representations about the services provided by Participating Brokers. To participate in this program, the member does not have to finance mortgage loan through Define Mortgage Solutions LLC. For full program details, see the Real Estate Broker Program Member Notice Acknowledgement.</p>
+                    <p><sup>2</sup>The cash back is paid based on 1% of the total loan amount ($10,000 minimum), not including any additional loan dollars toward ancillary products (Guaranteed Asset Protection [GAP], Mechanical Breakdown Protection [MBP]). The cash back will be deposited into your Desert Financial savings account within one business day of the loan funding. Maximum cash back amount is $500. Cash back amounts are subject to all applicable taxes and are the responsibility of the member. Offer available for the refinancing of non-Desert Financial auto loans only and is valid for a limited time only.</p>
+                    <p><sup>3</sup>First payment may be deferred for up to 90 days from loan date. Your loan will accrue interest during that time. Some restrictions apply. See a representative for details. </p>
+                </small>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 7 --->
+    <section id="module7" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_EverythingElse-Blue.ashx" height="121px" alt="">
+                <h2>Module 7</h2>
+                <h1>Everything Else Under The Sun</h1>
+            </div>
+            <div class="moduleContent">
+                <p>Don’t you hate it when you have to stop at three different stores just to get all your groceries? We sure do.</p>
+                <p>The same goes for your financial needs. Why deal with a bunch of different companies when you can get
+                    everything at your local credit union? Here are a few essential products you might not know about:</p>
+                <h1>Wills and Trusts</h1>
+                <p>A will is a legal document that outlines how someone’s personal assets will be divided after their death. It can also contain specific requests for funeral arrangements and determine who will care for children and other legal dependents if both parents/caretakers pass on.</p>
+                <p>A trust is similar to a will, except it goes into effect immediately (rather than after death). Trusts also detail how a person’s assets will be divided; however, they don’t include any instructions for funeral arrangements or guardianship. </p>
+                <p>A credit union may not be the first place that comes to mind when you think about making a will, but Desert Financial has a dedicated team that can walk you step-by-step through the process of <a href="#https://www.desertfinancial.com/news-and-knowledge/articles/6-Steps-to-Getting-a-Will" target="_blank"> creating a will</a> or trust. We can also help you prepare other legal documents including property deeds, LLC paperwork and Financial and/or Medical Powers of Attorney (POA). </p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Sign up for one of our <a href="https://solutions.desertfinancial.com/willandtrustrsvp?elqTrackId=3a6501ef8f9a411fb2cd30fb2f5bc375" target="_blank">FREE Wills & Trusts webinars</a> to learn more.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><a href="https://www.desertfinancial.com/personal/financial-planning/wills-and-trusts/wills-and-trusts-consultants?elqTrackId=b816dffff7b44d719431bf57c50d79be" target="_blank">Schedule an appointment with a Wills & Trusts representative</a> to start planning your estate.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Check out the <a href="https://www.desertfinancial.com/personal/why-choose-desert-financial/relationship-rewards?elqTrackId=8a6a495dfb3c432cb26a801735fb988f" target="_blank">Wills & Trusts discounts</a> you can get with our free Relationship Rewards program.</p>
+                </div>
+                <hr>
+                <h1>Investments</h1>
+                <p>Savings and money market accounts are a convenient way to store your money while earning interest, but they can only do so much. Investments give you an opportunity to really put your money to work for you.</p>
+                <p>Desert Financial Wealth Management, in partnership with global financial services firm Raymond James, offers investment services for Desert Financial members. From stocks and bonds to mutual funds, 401(k) plans and 529 plans, you’ll have access to everything you need to review your current plan or make new investments. </p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Start by getting the investment basics down in our <a href="https://www.desertfinancial.com/news-and-knowledge?elqTrackId=adfaf05c6739490486b5ae13c371db94#category=.investments" target="_blank">News & Knowledge Center</a>. </p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Fill out this <a href="https://www.desertfinancial.com/personal/financial-planning/contact-us?elqTrackId=1ffb999086284c0fbad707603e969d45" target="_blank">contact form</a> to get in touch with a Raymond James financial advisor at Desert Financial Wealth Management.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>If you’re new to investing or need a refresher, consider attending one of our free <a href="https://solutions.desertfinancial.com/Investment-RSVP?elqTrackId=c320997a570e4cab8f3e84b3c1b8b416" target="_blank">Wealth Management events</a>. You can also review past presentations to see what you missed.</p>
+                </div>
+                <hr>
+                <h1>Insurance & Medicare</h1>
+                <p>Insurance is probably one of those things that you feel like you don’t need … until you need it. That’s why most people don’t bother shopping around for new insurance unless they have to.</p>
+                <p>But what if you could score a better rate or more comprehensive coverage without doing the leg work? Desert Financial will actually shop around to compare insurance options for you! If you work with us, you’ll also be able to make your monthly insurance payments directly from your Desert Financial accounts.</p>
+                <p>Medicare insurance is available to adults ages 65 and older, as well as some younger people with disabilities or certain medical conditions. Navigating the maze of Medicare benefits without help can be a bit daunting. We’re here to help members untangle the information to get the medical, hospital and prescription coverage they need.</p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><a href="https://desertfinancial.insuranceaisle.com/?elqTrackId=ee68160a1f794fd6a1f55c61edb5564d" target="_blank">Request a quote</a> for auto, home, renters or business insurance.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p><a href="https://www.desertfinancial.com/personal/financial-planning/contact-us?elqTrackId=21124107016a4b5988c1af2dc514590f" target="_blank">Contact a representative</a> to get started finding your new insurance or Medicare coverage.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Attend a <a href="https://solutions.desertfinancial.com/Medicare-Seminar?elqTrackId=8d5f6bcf8a304ad698e55e0bfac9e33f" target="_blank">free online Medicare seminar</a> to learn more.</p>
+                </div>
+                <hr>
+                <p>Whew! That’s a lot of new info to tackle in one day. It’s time to kick back, relax and … <strong>check the box to complete this module</strong>.</p>
+                <div class="cta-module" onClick="closeModule7Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <small>
+                    <p>Wealth Management:</p>
+                    <p>Investment advisory services offered through Raymond James Financial Services Advisors, Inc. Securities offered through Raymond James Financial Services, Inc., Member <a href="http://www.finra.org/?elqTrackId=232409db5fb846568b44687f1269961b">FINRA</a> / <a href="http://www.sipc.org/?elqTrackId=8dd08b93b6514c4a871f6e8e3427febc">SIPC</a> | <a href="https://www.raymondjames.com/legal-disclosures?elqTrackId=84563c5a7ff64811b09688515fa7e42e">Legal Disclosures</a> | <a href="http://www.raymondjames.com/branches/library/disclaimers/rjfsprivacy.htm?elqTrackId=05d0afb0187c4630a05cb0d6ce79493e">Privacy Policy</a> | <a href="https://www.raymondjames.com/terms-of-use?elqTrackId=0e563e5f7b8b40439e61611268a08d85">Terms of Use</a></p>
+                    <p>Securities are not insured by credit union insurance, the NCUA or any other government agency, are not deposits or obligations of the credit union, are not guaranteed by the credit union, and are subject to risks, including the possible loss of principal. Desert Financial Credit Union, Desert Financial Wills and Trusts, Desert Financial Insurance and Desert Financial Wealth Management is not a registered broker/dealer and is independent of Raymond James Financial Services, Inc.</p>
+                    <p>Raymond James financial advisors may only conduct business with residents of the states and/or jurisdictions for which they are properly registered. Therefore, a response to a request for information may be delayed. Please note that not all of the investments and services mentioned are available in every state. Investors outside of the United States are subject to securities and tax regulations within their applicable jurisdictions that are not addressed on this site. Contact your local Raymond James office for information and availability.</p>
+                    <p>Links are being provided for information purposes only. Raymond James is not affiliated with and does not endorse, authorize or sponsor any of the listed websites or their respective sponsors. Raymond James is not responsible for the content of any website or the collection or use of information regarding any website's users and/or members.</p>
+                    <p>Desert Financial Credit Union, Desert Financial Wills and Trusts, Desert Financial Insurance and Desert Financial Wealth Management is not a registered broker/dealer and is independent of Raymond James Financial Services, Inc.</p>
+                    <p>Insurance:</p>
+                    <p>Insurance products and services are offered through Desert Financial Wealth Services, LLC dba Desert Financial Insurance Services and LTCi Consulting, LLC. Desert Financial Wealth Services, LLC is a subsidiary of Desert Financial Credit Union. LTCi Consulting, LLC is not affiliated with Desert Financial Wealth Services, LLC dba Desert Financial Insurance Services or Desert Financial Credit Union. Insurance products and services are not insured by the NCUA, are not an obligation of the credit union, and have no credit union guarantee.</p>
+                    <p>Wills & Trusts:</p>
+                    <p>Document preparation services are offered through Desert Financial Credit Union; an Arizona Supreme Court Certified Legal Document Preparation Business Entity (CLDP #81024). Legal document preparation services are not insured by the NCUA and have no credit union guarantee. </p>
+                </small>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 8 --->
+    <section id="module8" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_AnnualBonus-Blue" height="121px" alt="">
+                <h2>Module 8</h2>
+                <h1>Annual Cash Bonuses</h1>
+            </div>
+            <div class="moduleContent">
+                <p>Welcome back! You’re getting pretty good at completing these new member learning modules. Let’s take a deeper dive into a great membership perk we mentioned earlier — our Member Giveback Bonus.<sup>1</sup></p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="givingContent">
+                <div class="givingAmount"> In 2021, our members received
+                    <h4>$14 million</h4>
+                    in annual cashback bonuses!
+                </div>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>What is the Member Giveback Bonus? </h1>
+                <p>Our annual Member Giveback Bonus rewards members who have built a strong relationship with Desert Financial throughout the year. The more you do with us, the more you could potentially get back.</p>
+                <h1>Great. How Do I Get One?</h1>
+                <p>If you are at the <strong>Rewards or Rewards+ levels of our Relationship Rewards program for at least six months</strong> of the calendar year, you would be eligible to receive a Member Giveback Bonus. As a reminder, Relationship Rewards is our free rewards program available to all Desert Financial members. All members are automatically enrolled in Relationship Rewards — no need to sign up!</p>
+                <div class="bonusinfo">
+                    <p>Don’t remember how your new rewards program works? No problem. Review the <a href="https://solutions.desertfinancial.com/New-Member-Welcome-Center?elqTrackId=a63ac38d359a48e2b2c66dacfa7cd1c1#module5">Relationship Rewards program details</a> from Module 5. </p>
+                </div>
+                <p>The Member Giveback Bonus is typically awarded to eligible members in early February of the following year. Bonuses are deposited right into your Membership Savings account!</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="givingContent">
+                <div class="givingAmount"> In 2021, eligible members received an<br>average Member Giveback Bonus of
+                    <h4>$98.50!</h4>
+                </div>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>How Much Will I Get?</h1>
+                <p>Members who have the strongest relationship with us get the best results! This means that the MORE you do with us, the <a href="https://www.desertfinancial.com/news-and-knowledge/articles/Simple-Ways-to-Raise-Your-Rewards?elqTrackId=3226b3be8bca4a6eb405a09da5758574" target="_blank">MORE points you earn</a> to achieve a higher rewards level.</p>
+                <p>You’ve just started with Desert Financial, but let’s look ahead into the future. Use the Member Giveback Bonus Calculator below to see how strengthening your banking partnership with Desert Financial could help you earn more.</p>
+                <div class="bonus"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/calculator.ashx" alt="">
+                    <h3>Member Giveback Bonus Calculator</h3>
+                    <p><strong>Check all of the following that might apply, then click the button to see your potential rewards. </strong></p>
+                    <p><strong>Don’t forget:</strong> Points are calculated per household. So, if someone in your household has a point, you get that point too!</p>
+                    <hr>
+                    <form id="Rewardform">
+                        <label class="containerBox">I typically make 25 or more purchases with my debit card every month.
+                            <input type="checkbox" class="checkbox-1" />
+                            <span class="check"></span> </label>
+                        <label class="containerBox">I have a monthly direct deposit of $500 or more set up to my Desert Financial checking account.
+                            <input type="checkbox" class="checkbox-2" />
+                            <span class="check"></span> </label>
+                        <label class="containerBox">My savings and/or investment balances with Desert Financial total $10,000 or more.
+                            <input type="checkbox" />
+                            <span class="check"></span> </label>
+                        <label class="containerBox">I have a mortgage, HELOC, auto loan or auto refinance with Desert Financial.
+                            <input type="checkbox" />
+                            <span class="check"></span> </label>
+                        <label class="containerBox">Someone in my household has been a Desert Financial member for at least 20 years
+                            <input type="checkbox" />
+                            <span class="check"></span> </label>
+                    </form>
+                    <input type="button" class="cta-calculate" onclick="showTime();" value="ESTIMATE MY REWARDS" />
+                    <div id="myDIV1" style="display: none">
+                        <h3>My Rewards level</h3>
+                        <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/member level.ashx" alt="">
+                        <p>At the Member level, you would not qualify for a bonus. However, you can take these steps to raise your rewards level and potentially earn our annual cashback bonus:</p>
+                        <div class="numberBullet">1</div>
+                        <div class="information">
+                            <p><strong>TRANSACTING:</strong></p>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Set up automatic bill pay for monthly bills</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Have your paycheck directly deposited into a Desert Financial account</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Use your debit card to:</p>
+                                <ul>
+                                    <li>Buy gas</li>
+                                    <li>Pay for your morning coffee</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="numberBullet">2</div>
+                        <div class="information">
+                            <p><strong>SAVING:</strong><br>
+                                <em>To save $10,000, try:</em>
+                            </p>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Using a budgeting app or our free budgeting tool on the Desert Financial mobile app</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Automating monthly transfers to savings</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Completing a savings challenge</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Getting a savings certificate with Desert Financial</p>
+                            </div>
+                        </div>
+                        <div class="numberBullet">3</div>
+                        <div class="information">
+                            <p><strong>BORROWING:</strong><br>
+                                <em>Earn 1 point when you get a loan with us for one or more of these things:</em>
+                            </p>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Buying a home</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Purchasing a vehicle</p>
+                            </div>
+                            <div class="arrowBullet"></div>
+                            <div class="information">
+                                <p>Opening a <a href="https://www.desertfinancial.com/personal/loans/home-loan-overview/home-equity-line-of-credit?elqTrackId=d590e2ac5d204f53b9e809bf39ccffe2" target="_blank">home equity line of credit</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myDIV2" style="display: none">
+                        <h3>My Rewards level</h3>
+                        <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/rewards member level.ashx" alt="">
+                        <p><strong>Congratulations!</strong> As a Rewards member, you would be eligible to receive a Member Giveback Bonus. Rewards members received an average of $79.60 in 2021 through the Member Giveback Bonus.</p>
+                    </div>
+                    <div id="myDIV3" style="display: none">
+                        <h3>My Rewards level</h3>
+                        <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/rewards plus level.ashx" alt="">
+                        <p><strong>Congratulations!</strong> As a Rewards+ member, you would qualify for our highest bonus level. Rewards Plus members received an average of $120.80 in 2021 through the Member Giveback Bonus.</p>
+                    </div>
+                </div>
+                <p>Since the Member Giveback Bonus was introduced in 2018, we have awarded a total of <strong>$39 MILLION</strong> in annual cashback bonuses to our members:</p>
+                <div class="itemrow">
+                    <div class="itemleft">2018</div>
+                    <div class="itemcenter"></div>
+                    <div class="itemright">5 million</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="itemrow">
+                    <div class="itemleft">2019</div>
+                    <div class="itemcenter"></div>
+                    <div class="itemright">8 million</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="itemrow">
+                    <div class="itemleft">2020</div>
+                    <div class="itemcenter"></div>
+                    <div class="itemright">12 million</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="itemrow">
+                    <div class="itemleft">2021</div>
+                    <div class="itemcenter"></div>
+                    <div class="itemright">14 million</div>
+                    <div class="clear"></div>
+                </div>
+                <hr style="margin: 25px auto 70px auto">
+                <p>We hope that you’re looking forward to joining all of our members who have received an annual cashback bonus! Before you start working on your Relationship Rewards level, check the box below to complete this module. </p>
+                <div class="cta-module" onClick="closeModule8Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <small>
+                    <p><sup>1</sup>Must be Rewards Member or Rewards+ Member for a minimum of six months per calendar year to be eligible for cash back. Additional restrictions apply. See Statements of Terms, Conditions and Disclosures for full details.</p>
+                </small>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 9 --->
+    <section id="module9" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_GivingBack-Blue.ashx" height="121px" alt="">
+                <h2>Module 9</h2>
+                <h1>Giving Back & Getting More</h1>
+            </div>
+            <div class="moduleContent">
+                <p>At Desert Financial, we believe in sharing success with our members, community and team. But what exactly does “sharing success” mean? In this module, we’ll explore some of the ways Desert Financial gives back to you and the people around you!</p>
+                <h1>What is Sharing Success?</h1>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/baD_MVnwAGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>Sharing success is Desert Financial’s unique way of saying it’s our responsibility and privilege to give back to others. Some companies like to call this “social responsibility” or “philanthropy.” We call it sharing success because when we do well, we are able to share that success with our members, community and team. Everyone benefits from sharing success — it’s a win-win!</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="givingContent">
+                <div class="givingAmount"> Total giving in <strong>2020:</strong>
+                    <h4>$3.9 million</h4>
+                </div>
+                <div class="givingColumn"> <img src="https://images.solutions.desertfinancial.com/EloquaImages/clients/DesertSchools/%7Bb4d8aa0f-0d74-478c-b4b3-8d147e50bdf7%7D_covid.png" alt="" />
+                    <p>COVID-19 Relief:<br>
+                        <span>$1.2 million</span>
+                    </p>
+                </div>
+                <div class="givingColumn"> <img src="https://images.solutions.desertfinancial.com/EloquaImages/clients/DesertSchools/%7B679d8cc8-8683-4383-91ef-702dd9d60bb1%7D_volunteer.png" alt="" />
+                    <p>Volunteer Hours:<br>
+                        <span>7,015</span>
+                    </p>
+                </div>
+                <div class="givingColumn"> <img src="https://images.solutions.desertfinancial.com/EloquaImages/clients/DesertSchools/%7B732721d8-5b8b-4dea-8abc-9fac68c58029%7D_rak.png" alt="" />
+                    <p>Random Acts of Kindness:<br>
+                        <span>9,176</span>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h1>Random Acts of Kindness</h1>
+                <p>It all started with a phrase American journalist Anne Herbert scribbled on a placemat: “Practice random kindness and senseless acts of beauty.” Her children’s book based on the concept of random kindness was published in 1993. News media outlets began picking up stories of unexpected good deeds, and soon the phrase bloomed into a social movement called Random Acts of Kindness.</p>
+                <p>Here at Desert Financial, sharing success is what we’re all about — which is why Random Acts of Kindness fits so well into our community-giving efforts. We started our <strong>#KindnessRevolution</strong> in 2018, and to date, we have performed thousands of kind acts across Arizona! Check out our <a href="https://www.desertfinancial.com/news-and-knowledge/top-RAK?elqTrackId=bcada13487e746928a8e4f66ce5cb40d#addsearch=refer" target="_blank">most memorable kind acts of 2020</a>.</p>
+                <h1>The Desert Financial Foundation</h1>
+                <p>Founded in 2017, the <a href="https://www.desertfinancial.com/Foundation?elqTrackId=3137bee6415a47a5a39147dbdb97c685" target="_blank">Desert Financial Foundation</a> helps Valley nonprofits provide valuable services to the community through grants and supports education through scholarship and financial literacy programs. The Foundation also works to create innovative programs for Desert Financial Credit Union team members and to increase our outreach and impact in the community.</p>
+                <h1>Sharing Success in 2020 </h1>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CuCgGwMgN7g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>At Desert Financial, we’re committed to sharing success with our community in good times and in challenging ones. So, in 2020, while other organizations pulled back on their giving programs due to the COVID-19 pandemic, we were proud to double down on our support for communities throughout Arizona. We challenged ourselves to turn obstacles into opportunities! </p>
+                <p>We transformed our giving efforts with the rollout of some new programs including Ding-Dong Drop-Offs to local teachers, free financial literacy webinars and $80,000 in employee-directed donations. Check out our <a href="https://www.desertfinancial.com/news-and-knowledge/community-recap?elqTrackId=f58277f2c15d4c8688236a5756ffdb19" target="_blank">2020 community giving recap</a> and see for yourself!</p>
+                <h1>Refer a Friend and Earn Cash!</h1>
+                <img src="https://images.solutions.desertfinancial.com/EloquaImages/clients/DesertSchools/%7Bc15b1d11-8090-47a0-a58d-1bcb2f43a186%7D_100-100.png" alt="" />
+                <p>Now that you’ve learned about the awesome perks of your new membership, spread the word by referring your friends and family members to Desert Financial. You’ll earn a $100 cash bonus for every friend who signs up for a new checking account, and your friend will also receive a $100 cash bonus!<sup>1</sup> </p>
+                <h3>To qualify, your friend must:</h3>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Be a new member with no existing or open accounts (including joint accounts) in the last 12 months</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Make at least one direct deposit into a new checking account within 90 days</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Perform at least 30 debit card transactions within 90 days</p>
+                </div>
+                <p>Our Refer-a-Friend program is just one of the many ways that we share success with valued members like you! The more friends you refer, the more cash you can earn.</p>
+                <h3>How to Refer a Friend</h3>
+                <div class="numberBullet">1</div>
+                <div class="information">
+                    <p>Click below to download the Refer-a-Friend form.</p>
+                </div>
+                <div class="numberBullet">2</div>
+                <div class="information">
+                    <p>Fill out the left side and give it to your friend.</p>
+                </div>
+                <div class="numberBullet">3</div>
+                <div class="information">
+                    <p>Your friend will complete the new member section and bring it to a Desert Financial branch!</p>
+                </div>
+                <a href="https://www.desertfinancial.com/-/media/desert-financial/files/refer-a-friend.ashx?elqTrackId=b8f25eeaab5947e3b91e640629febb4e" target="_blank" class="textBtn"> <span class="titleLink">Download Now</span> </a>
+                <hr>
+                <p>You’re in the home stretch — just one more module left. Click the box below and then go do something kind for yourself. You deserve it!</p>
+                <div class="cta-module" onClick="closeModule9Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <small>
+                    <p><sup>1</sup>Refer-A-Friend cash bonus offer valid for a limited time only. New member must present completed Referral Form at time of account opening and establish a Membership Savings and Checking account. New members cannot have any existing accounts (primary or joint owner) within the last 12 months. Member and referee cannot begin credit union membership on the same business day.</p>
+                    <p>Account Opening Criteria: Primary account holder must be 18 years or older and meet Desert Financial’s membership eligibility and credit qualification requirements, including opening a Membership Savings account with a minimum balance of $25. Checking account is free; however, fees incurred — such as a stop payment or NSF fee — will apply. For complete terms and conditions, refer to the published Statements of Terms, Conditions and Disclosures booklet.</p>
+                    <p>Cash Bonus Criteria: To receive the cash bonus, the new checking account must meet the following criteria within the first 90 days: 1. Minimum of 30 posted transactions and 2. Establish direct deposit. 3. Must be open and cannot be delinquent (more than 30 days) at time of bonus payment. Bonus will be deposited into the qualifying Checking and referring member’s account within 10 business days in the month following the end of the first 90-day period if qualifications are met. Referring member must have an open and active share account at time of bonus payment and be at least 18 years of age. Employees of Desert Financial Credit Union, its subsidiaries, affiliates, or agencies and their immediate family (including spouse, parents, siblings, children, grandparents or grandchildren) are not eligible for bonus offer. Bonus amounts are subject to all applicable taxes and the responsibility of the member. Bonus cannot be combined with any other account opening offer. Referrals limited to five per member. Terms and conditions subject to change without notice.</p>
+                </small>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module 10 --->
+    <section id="module10" class="module">
+        <div class="moduleContainer">
+            <div class="closer">
+                <button class="cta-closer" onClick="closeAllFunction()">Close &#10006; </button>
+            </div>
+            <div class="clear"></div>
+            <div class="ModuleTitle"> <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_YourCreditUnion-Blue.ashx" height="121px" alt="">
+                <h2>Module 10</h2>
+                <h1>Your Credit Union</h1>
+            </div>
+            <div class="moduleContent">
+                <p>The finish line is just one click away! But don’t click quite yet. In this final module, you’ll learn about a few of the things that make credit unions unique — and better than banks.</p>
+                <h1>Credit Unions vs. Banks: What’s the Difference?</h1>
+                <p>While both banks and credit unions help you manage your finances, their philosophies couldn’t be more different! </p>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>A credit union is a not-for-profit, member-owned organization and cooperative. Credit unions can make a profit, but they reinvest that revenue into the organization to benefit members and give back to the community. The primary goal of a credit union is to help its members.</p>
+                </div>
+                <div class="arrowBullet"></div>
+                <div class="information">
+                    <p>Banks pay out large dividends to their shareholders; whereas credit unions pay out dividends and other big benefits to their members. While the goal of a credit union is to meet its members’ needs with the best terms and customer service, banks strive instead to earn profits for their investors.</p>
+                </div>
+                <h3>Personalized Service and Exceptional Experiences</h3>
+                <p>Credit unions carry a reputation for developing personal relationships with their members so they can better meet their individual needs. As a local institution, credit unions care deeply about their community. That’s why they value personal engagement with their members. Credit unions want to help their community members achieve their goals, build their futures and live with financial stability. </p>
+                <p>Desert Financial is here to help you grow like we helped our longtime member, Harry, put down roots in Arizona. </p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ahXPb9coAQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <h3>Community Outreach</h3>
+                <p>Many members enjoy being a part of an organization with a mission to do good within the community. Credit unions are passionate about donating to local charities and planning and participating in community service projects. </p>
+                <hr>
+                <h1>Meet Your New CU, Desert Financial!</h1>
+                <p>Hi! We’re thrilled to have you as a new member, so we figured we’d introduce ourselves properly.</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HTyAjjg1tlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>Desert Financial was originally founded in 1939 by a group of 15 educators in Phoenix, Arizona. The credit union started out with just $78.75 invested by our founders — which would be equivalent to about $1,450 today. (Not much to start a whole credit union!)</p>
+                <p>We originally just served teachers and educational professionals, but we grew to serve everyone who lived, worked or worshipped in the Phoenix metro area. Later, we grew even more to help members all across Arizona! We’ve always been in Arizona and we’re proud to call the 48th state our forever home. </p>
+                <hr>
+                <h1>Who We Are Today</h1>
+                <p>Our members are the heart of our organization. As a member, we’re here to help you work toward your financial goals — whether that includes saving for retirement, investing for your future or buying a home, like our members Juan and Leticia.</p>
+            </div>
+        </div>
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/S2Ulo-WpNFs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="moduleContainer">
+            <div class="moduleContent">
+                <p>Desert Financial gives back to the community by providing financial literacy workshops and financial assistance to local partners like Phoenix Children’s Hospital and Valley of the Sun United Way. We also make a difference by performing Random Acts of Kindness throughout Arizona and giving back to teachers in honor of our founders.</p>
+                <hr>
+                <p>You’ve reached the end of the final module … are you as excited as we are? Though our New Member Welcome Center helps get you started, it’s also here as a resource any time you need it. Just like Desert Financial is here by phone, chat or online whenever you need us. </p>
+                <p>Now, click the box below for a SPECIAL SURPRISE from your new financial partner. </p>
+                <div class="cta-module" onClick="closeModule10Function()">
+
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div>
+                        <div class="checkmark_stem"></div>
+                        <div class="checkmark_kick"></div>
+                    </span>
+                    <div class="text">I'm done with this module!</div>
+
+                </div>
+                <div class="footer">
+                    <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo-grey.ashx" alt="Equal Housing Opportunity Logo" width="12px"> Equal Housing Opportunity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Module Slider --->
+    <div class="splide">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev"> Prev </button>
+            <button class="splide__arrow splide__arrow--next"> Next </button>
+        </div>
+    </div>
+    <div id="secondary-slider" class="splide tabbed">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <span elqid="82" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="83" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="84" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="85" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="86" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="87" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="88" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="89" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide">
+                    <span elqid="90" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+                <li class="splide__slide last">
+                    <span elqid="91" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--- Module Intro Tile --->
+    <div id="primary-slider" class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_GettingStarted-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 1</h2>
+                            <h1>Getting Started</h1>
+                            <p>Watch a quick video tutorial, sign up for Online Banking and download our app. </p>
+                            <div class="cta-secondary show" target="1">Start Now</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_FindingUsGoingMobile-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 2</h2>
+                            <h1>Finding Us & Going Mobile</h1>
+                            <p>Get your new accounts set up and access your money.</p>
+                            <span elqid="92" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                            <div class="cta-secondary show" target="2">I'm Ready</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_PayingBillsSendingMoney-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 3</h2>
+                            <h1>Paying Bills & Spending Money</h1>
+                            <p>Make a payment or schedule recurring payments.</p>
+                            <span elqid="92" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                            <div class="cta-secondary show" target="3">Let's Do This</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_ClosingOldAccounts-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 4</h2>
+                            <h1>Closing Your Old Accounts</h1>
+                            <p>Move everything over and cut ties with your old financial institution.</p>
+                            <span elqid="92" elqtype="DynamicContent" class="remove-absolute" style="display: block"></span>
+                            <div class="cta-secondary show" target="4">Make The Switch</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_Rewards-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 5</h2>
+                            <h1>All About Rewards</h1>
+                            <p>Find out what you get with our free rewards program. </p>
+                            <div class="cta-secondary show" target="5">See My Perks</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_HomeAndAuto-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 6</h2>
+                            <h1>Home & Auto</h1>
+                            <p>What you need to know about mortgage, home equity, auto refi and auto loans.</p>
+                            <div class="cta-secondary show" target="6">Check It Out</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_EverythingElse-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 7</h2>
+                            <h1>Everything Else Under The Sun</h1>
+                            <p>We also offer investments, insurance, wills & trusts and more.</p>
+                            <div class="cta-secondary show" target="7">Lots of Options</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_AnnualBonus-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 8</h2>
+                            <h1>Annual Cash Bonuses</h1>
+                            <p>You could earn money every year just for banking with us. </p>
+                            <div class="cta-secondary show" target="8">Yes, Please</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_GivingBack-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 9</h2>
+                            <h1>Giving Back & Getting More</h1>
+                            <p>Help our community and pay it forward to a friend. </p>
+                            <div class="cta-secondary show" target="9">Ready For More</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <div class="itemTab">
+                        <div class="itemTabContainer">
+                            <div class="itemTabIcon"><img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/Onboarding-Module-Icons-V1_YourCreditUnion-White.ashx" height="121px" alt=""></div>
+                            <h2>Module 10</h2>
+                            <h1>Your Credit Union</h1>
+                            <p>What we do and how we’re different from the other guys. </p>
+                            <div class="cta-secondary show" target="10">Meet My CU</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--- Footer --->
+    <div class="footer">
+        <p>Federally insured by NCUA | <img src="https://www.desertfinancial.com/-/media/Desert%20Financial/Eloqua/Welcome%20Center/EHO-logo.ashx" alt="Equal Housing Opportunity Logo"> Equal Housing Opportunity</p>
+    </div>
+
+    <script src="https://www.desertfinancial.com/-/media/0f5c6de28a764f78955011416dda9368.ashx"></script>
+    <script type="text/javascript">
+        var hasher = window.location.hash;
+
+        if (hasher.indexOf('module1') > -1) {
+            document.getElementById("module1").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module2') > -1) {
+            document.getElementById("module2").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module3') > -1) {
+            document.getElementById("module3").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module4') > -1) {
+            document.getElementById("module4").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module5') > -1) {
+            document.getElementById("module5").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module6') > -1) {
+            document.getElementById("module6").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module7') > -1) {
+            document.getElementById("module7").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module8') > -1) {
+            document.getElementById("module8").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module9') > -1) {
+            document.getElementById("module9").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+        if (hasher.indexOf('module10') > -1) {
+            document.getElementById("module10").style.display = "block";
+            document.getElementById("welcome").style.display = "none";
+        }
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var secondarySlider = new Splide('#secondary-slider', {
+                type: 'slide',
+                perPage: 3,
+                fixedWidth: 52,
+                height: 52,
+                gap: 39,
+                cover: true,
+                isNavigation: true,
+                focus: 0,
+                pagination: false,
+                breakpoints: {
+                    831: {
+                        type: 'loop',
+                        focus: 'center',
+                        clones: -2,
+                    },
+                }
+            }).mount();
+
+            var primarySlider = new Splide('#primary-slider', {
+                type: 'fade',
+                pagination: false,
+                arrows: false,
+                cover: true,
+            }); // do not call mount() here.
+
+            primarySlider.sync(secondarySlider).mount();
+        });
+
+    </script>
+    <script>
+        function menuFunction() {
+            var x = document.getElementById("menuLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function menuIcon(x) {
+            var x = document.getElementById("menuIcon");
+            x.classList.toggle("change");
+        }
+
+        function closeWelcomeFunction() {
+            var x = document.getElementById("welcome");
+            x.style.display = "none";
+        }
+
+        function closeModule1Function() {
+            var x = document.getElementById("module1");
+            var y = document.getElementById("number1");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module1=on&lastModuleLocation=module1", "_blank");
+        }
+
+        function closeModule2Function() {
+            var x = document.getElementById("module2");
+            var y = document.getElementById("number2");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module2=on&lastModuleLocation=module2", "_blank");
+        }
+
+        function closeModule3Function() {
+            var x = document.getElementById("module3");
+            var y = document.getElementById("number3");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module3=on&lastModuleLocation=module3", "_blank");
+        }
+
+        function closeModule4Function() {
+            var x = document.getElementById("module4");
+            var y = document.getElementById("number4");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module4=on&lastModuleLocation=module4", "_blank");
+        }
+
+        function closeModule5Function() {
+            var x = document.getElementById("module5");
+            var y = document.getElementById("number5");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module5=on&lastModuleLocation=module5", "_blank");
+        }
+
+        function closeModule6Function() {
+            var x = document.getElementById("module6");
+            var y = document.getElementById("number6");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module6=on&lastModuleLocation=module6", "_blank");
+        }
+
+        function closeModule7Function() {
+            var x = document.getElementById("module7");
+            var y = document.getElementById("number7");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module7=on&lastModuleLocation=module7", "_blank");
+        }
+
+        function closeModule8Function() {
+            var x = document.getElementById("module8");
+            var y = document.getElementById("number8");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module8=on&lastModuleLocation=module8", "_blank");
+        }
+
+        function closeModule9Function() {
+            var x = document.getElementById("module9");
+            var y = document.getElementById("number9");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module9=on&lastModuleLocation=module9", "_blank");
+        }
+
+        function closeModule10Function() {
+            var x = document.getElementById("module10");
+            var y = document.getElementById("number10");
+            x.style.display = "none";
+            y.classList.add("done");
+            window.open(
+                "https://s1280579067.t.en25.com/e/f2?elqFormName=onboard-progress&elqSiteID=1280579067&emailAddress=<span class=eloquaemail >EmailAddress</span>&module10=on&lastModuleLocation=module10", "_blank");
+        }
+
+        function closeAllFunction() {
+            var divs = document.getElementsByClassName("module");
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+        }
+
+    </script>
+    <script>
+        jQuery(function() {
+            jQuery('.show').click(function() {
+                jQuery('.module').hide();
+                jQuery('#module' + $(this).attr('target')).show();
+            });
+        });
+
+    </script>
+    <!--- Calculator Script --->
+    <script language="JavaScript">
+        function calculate() {
+            var principal = document.loandata.principal.value;
+            var interest = document.loandata.interest.value / 100 / 12;
+            var payments = document.loandata.years.value;
+            var x = Math.pow(1 + interest, payments);
+            var monthly = (principal * x * interest) / (x - 1);
+            if (!isNaN(monthly) && (monthly != Number.POSITIVE_INFINITY) && (monthly != Number.NEGATIVE_INFINITY)) {
+                document.getElementById("p1").innerHTML = round(monthly);
+                document.getElementById("p2").innerHTML = document.loandata.years.value;
+                document.getElementById("p3").innerHTML = document.loandata.interest.value
+            } else {
+                document.getElementById("p1").innerHTML = "0"
+            }
+        }
+
+        function round(x) {
+            var answer = Math.round(x * 100) / 100
+            return answer.toFixed(2)
+        }
+
+    </script>
+    <script>
+        function showTime() {
+            var div1 = document.getElementById("myDIV1");
+            var div2 = document.getElementById("myDIV2");
+            var div3 = document.getElementById("myDIV3");
+
+            var inputs = document.getElementById("Rewardform").elements;
+            var count = 0;
+            for (var i = 0; i < inputs.length; i++) {
+                console.log(inputs[1]);
+                if (inputs[i].type == 'checkbox' && inputs[i].checked) {
+                    count++;
+                }
+
+            }
+            /***** HERE'S WHAT I'M ADDING *******/
+            if ($('input.checkbox-1').prop('checked') && $('input.checkbox-2').prop('checked')) {
+                count--;
+            }
+            console.log(count + " count total");
+            /**********************************/
+
+            if (count <= 0) {
+                div1.style.display = "block";
+                div2.style.display = "none";
+                div3.style.display = "none";
+            }
+            if (count > 0) {
+                div1.style.display = "block";
+                div2.style.display = "none";
+                div3.style.display = "none";
+            }
+            if (count > 1) {
+                div2.style.display = "block";
+                div1.style.display = "none";
+                div3.style.display = "none";
+            }
+            if (count > 2) {
+                div3.style.display = "block";
+                div1.style.display = "none";
+                div2.style.display = "none";
+            }
+
+
+        }
+
+    </script>
+
+    <script>
+        /*.... ADD IFRAME FROM YOUTUBE VIDEOS....*/
+        // Find all the YouTube video embedded on a page
+        var videos = document.getElementsByClassName("youtube");
+
+        for (var i = 0; i < videos.length; i++) {
+
+            var youtube = videos[i];
+
+            // Based on the YouTube ID, we can easily find the thumbnail image
+            var img = document.createElement("img");
+            img.setAttribute("src", "http://i.ytimg.com/vi/" +
+                youtube.id + "/hqdefault.jpg");
+            img.setAttribute("class", "thumb");
+            img.setAttribute("alt", "Youtube image");
+
+
+            // Overlay the Play icon to make it look like a video player
+            var circle = document.createElement("div");
+            circle.setAttribute("class", "circle");
+
+            youtube.appendChild(img);
+            youtube.appendChild(circle);
+
+            // Attach an onclick event to the YouTube Thumbnail
+            youtube.onclick = function() {
+
+                // Create an iFrame with autoplay set to true
+                var iframe = document.createElement("iframe");
+                iframe.setAttribute("src",
+                    "https://www.youtube.com/embed/" + this.id +
+                    "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&mute=1&rel=0") + "";
+
+                // The height and width of the iFrame should be the same as parent
+                iframe.style.width = this.style.width;
+                iframe.style.height = this.style.height;
+
+                // Replace the YouTube thumbnail with YouTube HTML5 Player
+                this.parentNode.replaceChild(iframe, this);
+
+            };
+        }
+
+    </script>
+</body>
+
+</html>
