@@ -563,6 +563,9 @@
         .footer p img {
             width: 10px;
         }
+        .moduleContainer .footer p img {
+            background: #545454;
+        }
 
         #module1,
         #module2,
@@ -578,15 +581,14 @@
         }
 
         .module {
-            position: fixed;
-            height: calc(100% - 130px);
+            position: absolute;
+            height: 100%;
             width: 100%;
             background: #EFEFEF;
             z-index: 110;
             font-size: 15px;
             letter-spacing: -0.5px;
             color: #003A79;
-            overflow: scroll;
         }
 
         .moduleContainer {
@@ -2230,7 +2232,8 @@
                     <h1>YOUR CREDIT UNION</h1>
                 </div>
             </div>
-        </a> </div>
+        </a> 
+    </div>
 
     <!--- Module 1 --->
     <section id="module1" class="module">
